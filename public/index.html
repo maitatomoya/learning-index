@@ -3,276 +3,268 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Learning Index｜作って、動かして、学ぶ学習サービス集</title>
-  <meta name="description" content="ブラウザで書いて実行しながら学ぶ200 Stepsシリーズ、クラウドアーキテクチャ学習、開発ブログ。個人開発の学習Webサービスをまとめたポータルです。">
+  <title>Tomoya Maita 公式サイト｜作って、動かして、学ぶ学習サービス</title>
+  <meta name="description" content="元教員のエンジニアTomoya Maitaが個人で開発・運用している学習Webサービス（200 Stepsシリーズ、アーキテクチャ学習、Webセキュリティ）とブログの入口。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="page">
+  <a class="skipLink" href="#pickup">本文へスキップ</a>
 
-  <header class="masthead">
-    <p class="masthead-overline">作って、動かして、学ぶ</p>
-    <h1 class="masthead-title">Learning Index</h1>
-    <p class="masthead-sub">学習サービス目次</p>
-    <p class="masthead-lede">
-      すべて個人で開発・運用している学習Webサービスの入口です。
-      ブラウザだけで始められるステップ形式の教材と、
-      クラウド設計をケースで学ぶ教材、そして開発ブログをまとめています。
-    </p>
-    <p class="masthead-meta">公開12サービス</p>
+  <header class="siteHeader" aria-label="サイトヘッダー">
+    <a class="brand" href="#top" aria-label="Tomoya Maita 公式サイト トップへ">
+      <span class="brandLogo">Tomoya Maita</span>
+    </a>
+    <div class="navScrim" id="navScrim" aria-hidden="true"></div>
+    <nav class="nav" id="siteNav" aria-label="主要ナビゲーション">
+      <div class="navDrawerHead">
+        <span class="navDrawerTitle" aria-hidden="true">Menu</span>
+        <button class="navClose" type="button" id="navClose" aria-label="メニューを閉じる">×</button>
+      </div>
+      <a class="isActive" aria-current="page" href="#top">ホーム</a>
+      <a href="#steps">教材</a>
+      <a href="#arch">クラウド</a>
+      <a href="#security">セキュリティ</a>
+      <a href="https://mt-dev-io.pages.dev">ブログ</a>
+      <a href="https://github.com/maitatomoya">GitHub</a>
+    </nav>
+    <div class="langSwitch" role="group" aria-label="Language">
+      <span class="langBtn isActive" aria-current="true">JP</span>
+    </div>
+    <button class="navToggle" type="button" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="メニューを開く">
+      <span class="navToggleBar"></span>
+      <span class="navToggleBar"></span>
+      <span class="navToggleBar"></span>
+    </button>
   </header>
 
-  <main id="main">
+  <main id="top">
+    <h1 class="srOnly">Tomoya Maita 公式サイト｜作って、動かして、学ぶ学習サービス</h1>
 
-    <!-- 01 200 Stepsシリーズ -->
-    <section class="chapter" aria-labelledby="sec-steps">
-      <div class="chapter-head">
-        <span class="chapter-no" aria-hidden="true">01</span>
-        <div class="chapter-titles">
-          <h2 id="sec-steps">200 Stepsシリーズ</h2>
-          <p class="chapter-lede">
-            プログラミング言語をブラウザ上で書いて、その場で実行しながら学ぶステップ形式の教材シリーズ。
-            環境構築は不要で、1ステップずつ手を動かして進められます。
-          </p>
-        </div>
-        <p class="chapter-count">公開7</p>
-      </div>
+    <!-- PICK UP -->
+    <section class="section newsFeed" id="pickup" aria-labelledby="pickup-title">
+      <h2 class="deckTitle" id="pickup-title"><span>PICK UP</span></h2>
 
-      <ol class="entries">
+      <a class="newsSlide" href="https://python-200-steps.pages.dev">
+        <span class="newsSlidePic">
+          <span class="cover cover-hero" aria-hidden="true">
+            <span class="coverTitle">Python<br>200 Steps</span>
+            <span class="coverBar"></span>
+            <span class="coverSub">コードを直して、その場で実行。250ステップで基礎から中級へ</span>
+          </span>
+        </span>
+        <span class="newsSlideBody">
+          <time class="newsDate" datetime="2026-09-03">2026年9月3日</time>
+          <span class="newsTitle">『Python 200 Steps』を公開しました</span>
+        </span>
+      </a>
+
+      <ol class="thumbs" aria-label="最近の公開">
         <li>
-          <a class="entry" href="https://cpp-200-steps.pages.dev">
-            <span class="entry-main">
-              <span class="chip" style="--c:#00599c" aria-hidden="true"></span>
-              <span class="entry-name">C++ 200 Steps</span>
-              <span class="leader" aria-hidden="true"></span>
-              <span class="entry-tail">
-                <span class="badge">言語</span>
-                <span class="arrow" aria-hidden="true">&#8599;</span>
-              </span>
-            </span>
-            <span class="entry-desc">C++を基礎から学ぶステップ教材。ブラウザ上で書いて、その場で実行できる。</span>
+          <a class="thumb" href="https://python-200-steps.pages.dev">
+            <span class="cover cover-mini cover-python" aria-hidden="true"><span class="coverMiniTitle">Python 200 Steps</span><span class="coverMiniSub">エラーを読んで直す50問つき</span></span>
+            <span class="thumbNo">01</span>
+            <span class="srOnly">Python 200 Steps</span>
           </a>
         </li>
         <li>
-          <a class="entry" href="https://rust-200-steps.pages.dev">
-            <span class="entry-main">
-              <span class="chip" style="--c:#b7410e" aria-hidden="true"></span>
-              <span class="entry-name">Rust 200 Steps</span>
-              <span class="leader" aria-hidden="true"></span>
-              <span class="entry-tail">
-                <span class="badge">言語</span>
-                <span class="arrow" aria-hidden="true">&#8599;</span>
-              </span>
-            </span>
-            <span class="entry-desc">Rustを基礎から学ぶ200ステップ。所有権もコードを動かしながら身につける。</span>
+          <a class="thumb" href="https://gcp-architecture-patterns.pages.dev">
+            <span class="cover cover-mini cover-gcp" aria-hidden="true"><span class="coverMiniTitle">GCP Architecture Patterns</span><span class="coverMiniSub">50ケースで構成を考える</span></span>
+            <span class="thumbNo">02</span>
+            <span class="srOnly">GCP Architecture Patterns</span>
           </a>
         </li>
         <li>
-          <a class="entry" href="https://go-200-steps.pages.dev">
-            <span class="entry-main">
-              <span class="chip" style="--c:#007d9c" aria-hidden="true"></span>
-              <span class="entry-name">Go 200 Steps</span>
-              <span class="leader" aria-hidden="true"></span>
-              <span class="entry-tail">
-                <span class="badge">言語</span>
-                <span class="arrow" aria-hidden="true">&#8599;</span>
-              </span>
-            </span>
-            <span class="entry-desc">Goを基礎から学ぶ200ステップ。シンプルな文法を順に書いて確かめる。</span>
+          <a class="thumb" href="https://web-security-patterns.pages.dev">
+            <span class="cover cover-mini cover-sec" aria-hidden="true"><span class="coverMiniTitle">Web Security Patterns</span><span class="coverMiniSub">攻撃の仕組みと修正コード</span></span>
+            <span class="thumbNo">03</span>
+            <span class="srOnly">Web Security Patterns</span>
           </a>
         </li>
         <li>
-          <a class="entry" href="https://php-200-steps.pages.dev">
-            <span class="entry-main">
-              <span class="chip" style="--c:#6a6dae" aria-hidden="true"></span>
-              <span class="entry-name">PHP 200 Steps</span>
-              <span class="leader" aria-hidden="true"></span>
-              <span class="entry-tail">
-                <span class="badge">言語</span>
-                <span class="arrow" aria-hidden="true">&#8599;</span>
-              </span>
-            </span>
-            <span class="entry-desc">PHPを基礎から学ぶ200ステップ。Webでよく使う書き方を実行しながら学ぶ。</span>
+          <a class="thumb" href="https://aws-architecture-patterns.pages.dev">
+            <span class="cover cover-mini cover-aws" aria-hidden="true"><span class="coverMiniTitle">AWS Architecture Patterns</span><span class="coverMiniSub">公式アイコンで描く50ケース</span></span>
+            <span class="thumbNo">04</span>
+            <span class="srOnly">AWS Architecture Patterns</span>
           </a>
         </li>
         <li>
-          <a class="entry" href="https://javascript-200-steps.pages.dev">
-            <span class="entry-main">
-              <span class="chip" style="--c:#b39b00" aria-hidden="true"></span>
-              <span class="entry-name">JavaScript 200 Steps</span>
-              <span class="leader" aria-hidden="true"></span>
-              <span class="entry-tail">
-                <span class="badge">言語</span>
-                <span class="arrow" aria-hidden="true">&#8599;</span>
-              </span>
-            </span>
-            <span class="entry-desc">JavaScriptを基礎から学ぶ200ステップ。ブラウザの言語をブラウザで学ぶ。</span>
-          </a>
-        </li>
-        <li>
-          <a class="entry" href="https://stimulus-200-steps.pages.dev">
-            <span class="entry-main">
-              <span class="chip" style="--c:#4fa07a" aria-hidden="true"></span>
-              <span class="entry-name">Stimulus 200 Steps</span>
-              <span class="leader" aria-hidden="true"></span>
-              <span class="entry-tail">
-                <span class="badge">フレームワーク</span>
-                <span class="arrow" aria-hidden="true">&#8599;</span>
-              </span>
-            </span>
-            <span class="entry-desc">JavaScriptフレームワークStimulusを基礎から学ぶ200ステップ。</span>
-          </a>
-        </li>
-        <li>
-          <a class="entry" href="https://python-200-steps.pages.dev">
-            <span class="entry-main">
-              <span class="chip" style="--c:#3776ab" aria-hidden="true"></span>
-              <span class="entry-name">Python 200 Steps</span>
-              <span class="leader" aria-hidden="true"></span>
-              <span class="entry-tail">
-                <span class="badge">言語</span>
-                <span class="arrow" aria-hidden="true">&#8599;</span>
-              </span>
-            </span>
-            <span class="entry-desc">Pythonを基礎から学ぶ200ステップ。エラーを読んで直す50問つき。</span>
+          <a class="thumb" href="https://cpp-200-steps.pages.dev">
+            <span class="cover cover-mini cover-cpp" aria-hidden="true"><span class="coverMiniTitle">C++ 200 Steps</span><span class="coverMiniSub">ブラウザで書いて、その場で実行</span></span>
+            <span class="thumbNo">05</span>
+            <span class="srOnly">C++ 200 Steps</span>
           </a>
         </li>
       </ol>
+
+      <p class="moreWrap">
+        <a class="pillBtn" href="https://mt-dev-io.pages.dev">もっと見る ― 開発ブログ <span aria-hidden="true">→</span></a>
+      </p>
     </section>
 
-    <!-- 02 アーキテクチャ学習 -->
-    <section class="chapter" aria-labelledby="sec-arch">
-      <div class="chapter-head">
-        <span class="chapter-no" aria-hidden="true">02</span>
-        <div class="chapter-titles">
-          <h2 id="sec-arch">アーキテクチャ学習</h2>
-          <p class="chapter-lede">
-            要件からクラウドの構成を考える教材シリーズ。
-            サービスの暗記ではなく、「この課題ならどう組むか」をケースで学びます。
-          </p>
-        </div>
-        <p class="chapter-count">公開3</p>
+    <section class="section homeIntro" aria-label="紹介">
+      <p>「作って、動かして、学ぶ」学習Webサービスを個人で開発・運用している、元教員のエンジニアTomoya Maitaの公式サイト。</p>
+    </section>
+
+    <!-- サービス案内 -->
+    <section class="section deckWrap" id="guide" aria-labelledby="guide-title">
+      <h2 class="deckTitle" id="guide-title"><span>サービス案内</span></h2>
+
+      <h3 class="deckSub" id="steps">200 Stepsシリーズ <small>ブラウザ上で書いて実行して学ぶステップ教材</small></h3>
+      <div class="deck">
+        <a class="card c-yellow" href="https://cpp-200-steps.pages.dev">
+          <span class="cardGlyph" aria-hidden="true">C++</span>
+          <span class="cardBody">
+            <span class="cardTitle">C++ 200 STEPS</span>
+            <span class="cardDesc">C++を基礎から250ステップ。ブラウザで書いて、その場で実行。</span>
+          </span>
+          <span class="cardArrow" aria-hidden="true">→</span>
+        </a>
+        <a class="card c-pink" href="https://rust-200-steps.pages.dev">
+          <span class="cardGlyph" aria-hidden="true">Rs</span>
+          <span class="cardBody">
+            <span class="cardTitle">RUST 200 STEPS</span>
+            <span class="cardDesc">所有権もコードを動かしながら身につける250ステップ。</span>
+          </span>
+          <span class="cardArrow" aria-hidden="true">→</span>
+        </a>
+        <a class="card c-cyan" href="https://go-200-steps.pages.dev">
+          <span class="cardGlyph" aria-hidden="true">Go</span>
+          <span class="cardBody">
+            <span class="cardTitle">GO 200 STEPS</span>
+            <span class="cardDesc">シンプルな文法を順に書いて確かめる250ステップ。</span>
+          </span>
+          <span class="cardArrow" aria-hidden="true">→</span>
+        </a>
+        <a class="card c-pink" href="https://php-200-steps.pages.dev">
+          <span class="cardGlyph" aria-hidden="true">PHP</span>
+          <span class="cardBody">
+            <span class="cardTitle">PHP 200 STEPS</span>
+            <span class="cardDesc">Webでよく使う書き方を実行しながら学ぶ250ステップ。</span>
+          </span>
+          <span class="cardArrow" aria-hidden="true">→</span>
+        </a>
+        <a class="card c-cyan" href="https://javascript-200-steps.pages.dev">
+          <span class="cardGlyph" aria-hidden="true">JS</span>
+          <span class="cardBody">
+            <span class="cardTitle">JAVASCRIPT 200 STEPS</span>
+            <span class="cardDesc">ブラウザの言語をブラウザで学ぶ250ステップ。</span>
+          </span>
+          <span class="cardArrow" aria-hidden="true">→</span>
+        </a>
+        <a class="card c-yellow" href="https://stimulus-200-steps.pages.dev">
+          <span class="cardGlyph" aria-hidden="true">St</span>
+          <span class="cardBody">
+            <span class="cardTitle">STIMULUS 200 STEPS</span>
+            <span class="cardDesc">Hotwire系フレームワークStimulusを基礎から250ステップ。</span>
+          </span>
+          <span class="cardArrow" aria-hidden="true">→</span>
+        </a>
+        <a class="card c-cyan" href="https://python-200-steps.pages.dev">
+          <span class="cardGlyph" aria-hidden="true">Py</span>
+          <span class="cardBody">
+            <span class="cardTitle">PYTHON 200 STEPS</span>
+            <span class="cardDesc">エラーを読んで直す50問つき。250ステップで基礎から中級へ。</span>
+          </span>
+          <span class="cardArrow" aria-hidden="true">→</span>
+        </a>
       </div>
 
-      <ol class="entries">
-        <li>
-          <a class="entry" href="https://aws-architecture-patterns.pages.dev">
-            <span class="entry-main">
-              <span class="chip" style="--c:#c7511f" aria-hidden="true"></span>
-              <span class="entry-name">AWS Architecture Patterns</span>
-              <span class="leader" aria-hidden="true"></span>
-              <span class="entry-tail">
-                <span class="badge">クラウド</span>
-                <span class="arrow" aria-hidden="true">&#8599;</span>
-              </span>
-            </span>
-            <span class="entry-desc">ケースで学ぶAWSアーキテクチャ。要件を読み、構成を考えてから解説で確かめる。</span>
-          </a>
-        </li>
-        <li>
-          <a class="entry" href="https://cloudflare-architecture-patterns.pages.dev">
-            <span class="entry-main">
-              <span class="chip" style="--c:#d1650d" aria-hidden="true"></span>
-              <span class="entry-name">Cloudflareアーキテクチャ入門</span>
-              <span class="leader" aria-hidden="true"></span>
-              <span class="entry-tail">
-                <span class="badge">クラウド</span>
-                <span class="arrow" aria-hidden="true">&#8599;</span>
-              </span>
-            </span>
-            <span class="entry-desc">Cloudflareの主要サービスとアーキテクチャパターンを、公式ドキュメントベースで学ぶ。</span>
-          </a>
-        </li>
-        <li>
-          <a class="entry" href="https://gcp-architecture-patterns.pages.dev">
-            <span class="entry-main">
-              <span class="chip" style="--c:#4285f4" aria-hidden="true"></span>
-              <span class="entry-name">GCP Architecture Patterns</span>
-              <span class="leader" aria-hidden="true"></span>
-              <span class="entry-tail">
-                <span class="badge">クラウド</span>
-                <span class="arrow" aria-hidden="true">&#8599;</span>
-              </span>
-            </span>
-            <span class="entry-desc">ケースで学ぶGCPアーキテクチャ。Cloud RunやBigQueryを軸に50ケースで構成を考える。</span>
-          </a>
-        </li>
-      </ol>
-    </section>
-
-    <!-- 03 セキュリティ -->
-    <section class="chapter" aria-labelledby="sec-security">
-      <div class="chapter-head">
-        <span class="chapter-no" aria-hidden="true">03</span>
-        <div class="chapter-titles">
-          <h2 id="sec-security">セキュリティ</h2>
-          <p class="chapter-lede">
-            Webアプリケーションを守る側の視点を学ぶシリーズ。攻撃の仕組みと修正コードで学びます。
-          </p>
-        </div>
-        <p class="chapter-count">公開1</p>
+      <h3 class="deckSub" id="arch">アーキテクチャ学習 <small>要件からクラウドの構成を考えるケーススタディ</small></h3>
+      <div class="deck">
+        <a class="card c-yellow" href="https://aws-architecture-patterns.pages.dev">
+          <span class="cardGlyph" aria-hidden="true">AWS</span>
+          <span class="cardBody">
+            <span class="cardTitle">AWS PATTERNS</span>
+            <span class="cardDesc">50ケースで学ぶAWS構成。要件を読み、設計を考えてから解説で確かめる。</span>
+          </span>
+          <span class="cardArrow" aria-hidden="true">→</span>
+        </a>
+        <a class="card c-pink" href="https://cloudflare-architecture-patterns.pages.dev">
+          <span class="cardGlyph" aria-hidden="true">CF</span>
+          <span class="cardBody">
+            <span class="cardTitle">CLOUDFLARE PATTERNS</span>
+            <span class="cardDesc">Cloudflareの主要サービスと構成パターンを公式ドキュメントベースで。</span>
+          </span>
+          <span class="cardArrow" aria-hidden="true">→</span>
+        </a>
+        <a class="card c-cyan" href="https://gcp-architecture-patterns.pages.dev">
+          <span class="cardGlyph" aria-hidden="true">GCP</span>
+          <span class="cardBody">
+            <span class="cardTitle">GCP PATTERNS</span>
+            <span class="cardDesc">Cloud RunやBigQueryを軸に、50ケースで構成を考える。</span>
+          </span>
+          <span class="cardArrow" aria-hidden="true">→</span>
+        </a>
       </div>
 
-      <ol class="entries">
-        <li>
-          <a class="entry" href="https://web-security-patterns.pages.dev">
-            <span class="entry-main">
-              <span class="chip" style="--c:#b8860b" aria-hidden="true"></span>
-              <span class="entry-name">Web Security Patterns</span>
-              <span class="leader" aria-hidden="true"></span>
-              <span class="entry-tail">
-                <span class="badge">セキュリティ</span>
-                <span class="arrow" aria-hidden="true">&#8599;</span>
-              </span>
-            </span>
-            <span class="entry-desc">Webセキュリティの典型的な攻撃と防御を15トピックで学ぶ。脆弱なコードと修正コードの比較つき。</span>
-          </a>
-        </li>
-      </ol>
-    </section>
-
-    <!-- 04 ブログ -->
-    <section class="chapter" aria-labelledby="sec-blog">
-      <div class="chapter-head">
-        <span class="chapter-no" aria-hidden="true">04</span>
-        <div class="chapter-titles">
-          <h2 id="sec-blog">ブログ</h2>
-          <p class="chapter-lede">
-            学習サービスの背景にある試行錯誤は、ブログに記録しています。
-          </p>
-        </div>
-        <p class="chapter-count">公開1</p>
+      <h3 class="deckSub" id="security">セキュリティとブログ <small>守る側の視点と、開発の裏側</small></h3>
+      <div class="deck">
+        <a class="card c-pink" href="https://web-security-patterns.pages.dev">
+          <span class="cardGlyph" aria-hidden="true">SEC</span>
+          <span class="cardBody">
+            <span class="cardTitle">WEB SECURITY</span>
+            <span class="cardDesc">攻撃の仕組みと、脆弱なコード／修正コードの比較で学ぶ15トピック。</span>
+          </span>
+          <span class="cardArrow" aria-hidden="true">→</span>
+        </a>
+        <a class="card c-yellow" href="https://mt-dev-io.pages.dev">
+          <span class="cardGlyph" aria-hidden="true">BLOG</span>
+          <span class="cardBody">
+            <span class="cardTitle">BLOG</span>
+            <span class="cardDesc">学習サービスの背景にある試行錯誤と、日々の技術記事。</span>
+          </span>
+          <span class="cardArrow" aria-hidden="true">→</span>
+        </a>
+        <a class="card c-cyan" href="https://github.com/maitatomoya">
+          <span class="cardGlyph" aria-hidden="true">GH</span>
+          <span class="cardBody">
+            <span class="cardTitle">GITHUB</span>
+            <span class="cardDesc">各サービスのソースコード。教材データと検証スクリプトも公開。</span>
+          </span>
+          <span class="cardArrow" aria-hidden="true">→</span>
+        </a>
       </div>
-
-      <ol class="entries">
-        <li>
-          <a class="entry" href="https://mt-dev-io.pages.dev">
-            <span class="entry-main">
-              <span class="chip" style="--c:#8a8378" aria-hidden="true"></span>
-              <span class="entry-name">maita tomoya dev io</span>
-              <span class="leader" aria-hidden="true"></span>
-              <span class="entry-tail">
-                <span class="badge">ブログ</span>
-                <span class="arrow" aria-hidden="true">&#8599;</span>
-              </span>
-            </span>
-            <span class="entry-desc">技術記事や学習記録を掲載する開発ブログ。</span>
-          </a>
-        </li>
-      </ol>
     </section>
-
   </main>
 
-  <footer class="colophon">
-    <p>
-      ソースコードや他の制作物は
-      <a href="https://github.com/maitatomoya">GitHub（maitatomoya）</a>
-      で公開しています。
+  <footer class="siteFooter">
+    <nav class="footNav" aria-label="フッターナビゲーション">
+      <a href="#steps">教材</a>
+      <a href="#arch">クラウド</a>
+      <a href="#security">セキュリティ</a>
+      <a href="https://mt-dev-io.pages.dev">ブログ</a>
+    </nav>
+    <p class="footPills">
+      <a class="pill" href="https://github.com/maitatomoya">GitHub</a>
+      <a class="pill" href="https://mt-dev-io.pages.dev">Blog</a>
     </p>
-    <p class="colophon-note">Learning Index — 作って、動かして、学ぶ。</p>
+    <p class="footNote">掲載しているサービスはすべて個人で開発・運用しています。</p>
+    <p class="footCopy">© 2026 Tomoya Maita</p>
   </footer>
 
-</div>
+  <script>
+    // モバイル用メニューの開閉。CSSだけでも閲覧は成立するため、失敗しても本文には影響しない
+    (function () {
+      var nav = document.getElementById("siteNav");
+      var toggle = document.getElementById("navToggle");
+      var close = document.getElementById("navClose");
+      var scrim = document.getElementById("navScrim");
+      if (!nav || !toggle) return;
+      function setOpen(open) {
+        nav.classList.toggle("isOpen", open);
+        scrim.classList.toggle("isOpen", open);
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        document.body.classList.toggle("navLock", open);
+      }
+      toggle.addEventListener("click", function () { setOpen(!nav.classList.contains("isOpen")); });
+      close.addEventListener("click", function () { setOpen(false); });
+      scrim.addEventListener("click", function () { setOpen(false); });
+      nav.addEventListener("click", function (e) { if (e.target.tagName === "A") setOpen(false); });
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape") setOpen(false); });
+    })();
+  </script>
 </body>
 </html>
