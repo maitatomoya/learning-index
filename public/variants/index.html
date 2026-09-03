@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>デザイン別バージョン一覧｜Tomoya Maita 公式サイト</title>
+  <meta name="robots" content="noindex">
+  <style>
+    :root { --ink: #1d1a2b; --paper: #fffdf8; --line: #d9d4c7; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 32px 24px 64px; background: #f6f3ec; color: var(--ink); font-family: "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif; line-height: 1.7; }
+    h1 { margin: 0 0 6px; font-size: 24px; }
+    .lead { margin: 0 0 28px; font-size: 14px; color: #5d5a68; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; max-width: 1200px; }
+    .item { display: block; background: var(--paper); border: 2px solid var(--ink); border-radius: 12px; overflow: hidden; color: inherit; text-decoration: none; box-shadow: 4px 4px 0 var(--ink); transition: transform .15s ease, box-shadow .15s ease; }
+    .item:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+    .item img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border-bottom: 2px solid var(--ink); background: #ddd; }
+    .body { padding: 14px 16px 16px; }
+    .name { display: block; font-size: 17px; font-weight: 700; }
+    .ref { display: block; margin-top: 2px; font-size: 12px; color: #5d5a68; }
+    .desc { margin: 8px 0 0; font-size: 13px; }
+    .back { display: inline-block; margin-top: 28px; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
+  </style>
+</head>
+<body>
+  <h1>デザイン別バージョン一覧</h1>
+  <p class="lead">ホームの内容はそのままに、参考サイトごとの雰囲気で作った7バージョン。気に入ったものを全ページに展開する。</p>
+  <div class="grid">
+    <a class="item" href="undertale.html">
+      <img src="thumbs/undertale.png" alt="">
+      <span class="body"><span class="name">Undertale版</span><span class="ref">参考：undertale.com</span><p class="desc">黒地に赤と黄の2色。8bit書体は見出しだけ。1画面1メッセージの余白。</p></span>
+    </a>
+    <a class="item" href="stardew.html">
+      <img src="thumbs/stardew.png" alt="">
+      <span class="body"><span class="name">Stardew Valley版</span><span class="ref">参考：stardewvalley.net</span><p class="desc">空の青にクリーム色の紙。丸ゴシックと紙の質感で牧歌的に。</p></span>
+    </a>
+    <a class="item" href="pico8.html">
+      <img src="thumbs/pico8.png" alt="">
+      <span class="body"><span class="name">PICO-8版</span><span class="ref">参考：lexaloffle.com/pico-8</span><p class="desc">16色パレットだけで構成。本文までドット書体。</p></span>
+    </a>
+    <a class="item" href="lospec.html">
+      <img src="thumbs/lospec.png" alt="">
+      <span class="body"><span class="name">Lospec版</span><span class="ref">参考：lospec.com/palette-list</span><p class="desc">ダークグレーに赤と黄。UIは現代的で、ピクセル感はパレットタイルが担う。</p></span>
+    </a>
+    <a class="item" href="dotown.html">
+      <img src="thumbs/dotown.png" alt="">
+      <span class="body"><span class="name">DOTOWN版</span><span class="ref">参考：dotown.maeda-design-room.net</span><p class="desc">白地に黒。CSSで描いたドット絵アイコンが主役で、枠組みは静か。</p></span>
+    </a>
+    <a class="item" href="pixelart-academy.html">
+      <img src="thumbs/pixelart-academy.png" alt="">
+      <span class="body"><span class="name">Pixel Art Academy版</span><span class="ref">参考：pixelart.academy</span><p class="desc">サイト全体をゲームのメニュー画面に見立てる。黒地に紺のパネルと水色。</p></span>
+    </a>
+    <a class="item" href="poolsuite.html">
+      <img src="thumbs/poolsuite.png" alt="">
+      <span class="body"><span class="name">Poolsuite版</span><span class="ref">参考：poolsuite.net</span><p class="desc">昔のOSのデスクトップ見立て。ウィンドウ、メニューバー、タスクバー。</p></span>
+    </a>
+  </div>
+  <a class="back" href="../">現在のホームに戻る</a>
+</body>
+</html>

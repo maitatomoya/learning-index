@@ -16,10 +16,11 @@ npx wrangler pages deploy public --project-name=learning-index
 
 ## 特徴
 
-- 依存パッケージゼロ（HTML+CSSのみ、JavaScriptなしで成立）
-- 雑誌の目次を模した編集デザイン（章番号・リーダー罫・明朝体の見出し）
-- レスポンシブ対応（モバイル1カラム）
-- ダークモード対応（prefers-color-scheme）
+- 依存パッケージゼロ（HTML+CSS＋モバイルメニュー用の最小限のJavaScript。JavaScriptなしでも閲覧できる）
+- ステッカー風のデザイン（2pxの縁取り＋ずらし影のカード、クリーム地にドット模様とパステルグラデーション、丸ゴシック系フォント）
+- 構成：ピル型ナビ／PICK UP（最新の公開と番号付きサムネイル）／一文の紹介／サービス案内（3列カード）／濃紺フッター
+- 画像は使わず、告知カードやサムネイルの表紙はCSSで描画
+- レスポンシブ対応（モバイルはハンバーガーメニューのドロワー、カードは1カラム）
 - 本文テキストはコントラスト比AA以上を確保
 
 ## 起動方法
@@ -33,14 +34,41 @@ node server.js
 
 サーバーは127.0.0.1にのみバインドされ、外部からはアクセスできません。
 
+## ページ構成
+
+個人の公式サイトとして、参考にしたサイトと同じく「ホーム＋コンテンツ別の下層ページ」の構成にしている。
+
+| ページ | 内容 |
+| --- | --- |
+| `index.html`（ホーム） | PICK UP（最新の公開と番号付きサムネイル）、一文の紹介、案内カード（学び／作品／プロフィール／200 Steps／ブログ／GitHub） |
+| `learn.html`（学び） | 学習系のポートフォリオ。200 Stepsシリーズ、アーキテクチャ学習、セキュリティ |
+| `works.html`（作品） | 学習サービス以外のプロダクト（Sapor、Pixsmith、this_is_pen） |
+| `about.html`（プロフィール） | 軸（教育・AI・エンジニアリング）、やっていること、リンク |
+
+## デザイン別バージョン（検討用）
+
+`public/variants/` に、ホームの内容そのままで雰囲気だけを変えた7バージョンを置いている（Undertale／Stardew Valley／PICO-8／Lospec／DOTOWN／Pixel Art Academy／Poolsuite）。
+`public/variants/index.html` がサムネイル付きの一覧。本線のデザインは変えず、今後の雰囲気変更の検討材料として残している（一覧・各版とも `noindex`）。
+
+デザインの好みと参考サイトの記録は `docs/design-ideal.md` と `docs/design-references.md` を参照。
+
 ## ディレクトリ構成
 
 ```
 learning-portal/
 ├── server.js          # ローカル確認用の静的配信サーバー（ポート3951）
 ├── public/
-│   ├── index.html     # ポータル本体
-│   └── styles.css     # スタイル
+│   ├── index.html     # ホーム
+│   ├── learn.html     # 学び
+│   ├── works.html     # 作品
+│   ├── about.html     # プロフィール
+│   ├── nav.js         # モバイルメニューの開閉
+│   ├── styles.css     # スタイル（全ページ共通）
+│   └── variants/      # デザイン別バージョン（検討用、noindex）
+├── docs/
+│   ├── design-ideal.md        # 理想のサイト像のメモ
+│   ├── design-references.md   # 配色の参考サイト一覧
+│   └── screenshots/
 └── README.md
 ```
 

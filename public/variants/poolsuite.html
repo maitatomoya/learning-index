@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tomoya Maita 公式サイト（Poolsuite版）</title>
+  <meta name="description" content="元教員のエンジニアTomoya Maitaの公式サイト。個人で開発・運用している学習Webサービス、作品、プロフィール、ブログの入口。">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Noto+Sans+JP:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="poolsuite.css">
+</head>
+<body>
+  <a class="skipLink" href="#pickup">本文へスキップ</a>
+
+  <header class="menuBar" aria-label="サイトヘッダー">
+    <a class="brand" href="../" aria-label="Tomoya Maita 公式サイト トップへ"><span class="brandLogo">Tomoya Maita</span></a>
+    <nav class="nav" aria-label="主要ナビゲーション">
+      <a class="isActive" aria-current="page" href="../">ホーム</a>
+      <a href="../about.html">プロフィール</a>
+      <a href="../learn.html">学び</a>
+      <a href="../works.html">作品</a>
+      <a href="https://mt-dev-io.pages.dev">ブログ</a>
+      <a href="https://github.com/maitatomoya">GitHub</a>
+    </nav>
+    <span class="menuClock" aria-hidden="true">2026.09</span>
+  </header>
+
+  <main id="top">
+    <h1 class="srOnly">Tomoya Maita 公式サイト</h1>
+
+    <section class="window" id="pickup" aria-labelledby="pickup-title">
+      <div class="titleBar">
+        <span class="winBtn" aria-hidden="true"></span>
+        <h2 class="winTitle" id="pickup-title">PICK UP</h2>
+        <span class="winResize" aria-hidden="true"></span>
+      </div>
+      <div class="winBody">
+        <a class="newsSlide" href="https://python-200-steps.pages.dev">
+          <span class="cover" aria-hidden="true">
+            <span class="coverTitle">Python 200 Steps</span>
+            <span class="coverSub">コードを直して、その場で実行。250ステップで基礎から中級へ</span>
+          </span>
+          <span class="newsSlideBody">
+            <time class="newsDate" datetime="2026-09-03">2026.09.03</time>
+            <span class="newsTitle">『Python 200 Steps』を公開しました</span>
+          </span>
+        </a>
+
+        <ol class="thumbs" aria-label="最近の公開">
+          <li><a class="thumb" href="https://python-200-steps.pages.dev"><span class="thumbBar" aria-hidden="true"><span>01</span></span><span class="thumbBody"><span class="thumbTitle">Python 200 Steps</span><span class="thumbSub">エラーを読んで直す50問つき</span></span></a></li>
+          <li><a class="thumb" href="https://gcp-architecture-patterns.pages.dev"><span class="thumbBar" aria-hidden="true"><span>02</span></span><span class="thumbBody"><span class="thumbTitle">GCP Architecture Patterns</span><span class="thumbSub">50ケースで構成を考える</span></span></a></li>
+          <li><a class="thumb" href="https://web-security-patterns.pages.dev"><span class="thumbBar" aria-hidden="true"><span>03</span></span><span class="thumbBody"><span class="thumbTitle">Web Security Patterns</span><span class="thumbSub">攻撃の仕組みと修正コード</span></span></a></li>
+          <li><a class="thumb" href="https://sapor.mt114r-an.workers.dev"><span class="thumbBar" aria-hidden="true"><span>04</span></span><span class="thumbBody"><span class="thumbTitle">Sapor</span><span class="thumbSub">Webデザインを言語化するカタログ</span></span></a></li>
+          <li><a class="thumb" href="https://pixsmith.pages.dev"><span class="thumbBar" aria-hidden="true"><span>05</span></span><span class="thumbBody"><span class="thumbTitle">Pixsmith</span><span class="thumbSub">アイコン・ピクセルロゴメーカー</span></span></a></li>
+        </ol>
+
+        <p class="moreWrap"><a class="bevelBtn" href="https://mt-dev-io.pages.dev">もっと見る ― 開発ブログ →</a></p>
+      </div>
+    </section>
+
+    <section class="window dialog" aria-label="紹介">
+      <div class="titleBar teal">
+        <span class="winBtn" aria-hidden="true"></span>
+        <span class="winTitle">ABOUT</span>
+        <span class="winResize" aria-hidden="true"></span>
+      </div>
+      <div class="winBody">
+        <span class="dialogIcon" aria-hidden="true"></span>
+        <p>「作って、動かして、学ぶ」を軸に、学習Webサービスとプロダクトを個人で開発・運用している、元教員のエンジニアTomoya Maitaの公式サイト。</p>
+      </div>
+    </section>
+
+    <section class="window" id="guide" aria-labelledby="guide-title">
+      <div class="titleBar">
+        <span class="winBtn" aria-hidden="true"></span>
+        <h2 class="winTitle" id="guide-title">案内</h2>
+        <span class="winResize" aria-hidden="true"></span>
+      </div>
+      <div class="winBody">
+        <div class="deck">
+          <a class="card" href="../learn.html">
+            <span class="cardTitle"><span class="cardIcon" aria-hidden="true"></span>学び</span>
+            <span class="cardDesc">ブラウザで書いて動かす200 Stepsシリーズ、クラウド設計のケーススタディ、Webセキュリティ。学習サービス11本。</span>
+          </a>
+          <a class="card" href="../works.html">
+            <span class="cardTitle"><span class="cardIcon pink" aria-hidden="true"></span>作品</span>
+            <span class="cardDesc">デザインカタログのSapor、ピクセルロゴメーカーのPixsmithなど、学習サービス以外のプロダクト。</span>
+          </a>
+          <a class="card" href="../about.html">
+            <span class="cardTitle"><span class="cardIcon" aria-hidden="true"></span>プロフィール</span>
+            <span class="cardDesc">元教員のエンジニア。教育とAIとエンジニアリングの重なるところで、作りながら学んでいます。</span>
+          </a>
+          <a class="card" href="../learn.html#steps">
+            <span class="cardTitle"><span class="cardIcon pink" aria-hidden="true"></span>200 Steps</span>
+            <span class="cardDesc">C++、Rust、Go、PHP、JavaScript、Stimulus、Python。言語ごとに250ステップを積み上げる看板シリーズ。</span>
+          </a>
+          <a class="card" href="https://mt-dev-io.pages.dev">
+            <span class="cardTitle"><span class="cardIcon" aria-hidden="true"></span>ブログ</span>
+            <span class="cardDesc">サービスの裏側の試行錯誤と、日々の技術記事。いま何をしているかはここ。</span>
+          </a>
+          <a class="card" href="https://github.com/maitatomoya">
+            <span class="cardTitle"><span class="cardIcon pink" aria-hidden="true"></span>GitHub</span>
+            <span class="cardDesc">各サービスのソースコード。教材データと検証スクリプトも公開。</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footMeta">
+      <p>掲載しているサービスはすべて個人で開発・運用しています。 (c) 2026 Tomoya Maita</p>
+    </div>
+    <nav class="taskBar" aria-label="フッターナビゲーション">
+      <span class="bevelBtn startBtn" aria-hidden="true">Start</span>
+      <a class="bevelBtn" href="../about.html">プロフィール</a>
+      <a class="bevelBtn" href="../learn.html">学び</a>
+      <a class="bevelBtn" href="../works.html">作品</a>
+      <a class="bevelBtn" href="https://mt-dev-io.pages.dev">ブログ</a>
+      <a class="bevelBtn pillLink" href="https://github.com/maitatomoya">GitHub</a>
+      <a class="bevelBtn pillLink" href="https://mt-dev-io.pages.dev">Blog</a>
+      <span class="taskInfo" aria-hidden="true">2026-09-03</span>
+    </nav>
+  </footer>
+</body>
+</html>

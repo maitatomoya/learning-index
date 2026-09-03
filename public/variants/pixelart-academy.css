@@ -1,0 +1,198 @@
+/*
+ * Pixel Art Academy版：サイト全体を「ゲームのメニュー画面」に見立てる。
+ * 黒い画面に紺のパネル（水色の枠＋二重線）を並べ、ナビは「▶」カーソル付きのメニュー、
+ * PICK UPは「NEW」のダイアログ、案内は「STATUS」画面、フッターは画面下のステータスバー。
+ * 見出しはドット書体（Press Start 2P／DotGothic16）、本文はNoto Sans JP。
+ * 画面全体に薄いCRTのスキャンラインを重ねる（読みにくくならない濃さ）。
+ */
+:root {
+  --screen: #000000;
+  --panel: #002c5c;
+  --panel-2: #1c4c78;
+  --frame: #92ceea;
+  --fg: #ffffff;
+  --muted: #cacaca;
+  --font-pixel-en: "Press Start 2P", "Courier New", monospace;
+  --font-pixel-jp: "DotGothic16", "Press Start 2P", monospace;
+  --font-body: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+  --maxw: 1000px;
+}
+
+* { box-sizing: border-box; }
+html, body { overflow-x: hidden; }
+body {
+  margin: 0;
+  background: var(--screen);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+/* CRTのスキャンライン。操作を邪魔しないようpointer-eventsは切る */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(180deg, transparent 0 2px, rgba(255, 255, 255, 0.05) 2px 3px);
+  z-index: 100;
+}
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 2px solid var(--frame); outline-offset: 3px; }
+.srOnly { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skipLink { position: absolute; left: 8px; top: -60px; padding: 8px 12px; background: var(--panel); border: 2px solid var(--frame); font-family: var(--font-pixel-jp); z-index: 200; }
+.skipLink:focus { top: 8px; }
+
+/* RPGのウィンドウ枠：水色の枠線＋内側の細い二重線＋四隅の角 */
+.panel {
+  position: relative;
+  background: var(--panel);
+  border: 2px solid var(--frame);
+  box-shadow: inset 0 0 0 3px var(--panel), inset 0 0 0 4px var(--panel-2);
+  padding: 22px 24px;
+}
+.panel::before, .panel::after {
+  content: "";
+  position: absolute;
+  width: 6px; height: 6px;
+  background: var(--frame);
+}
+.panel::before { left: -2px; top: -2px; box-shadow: calc(100% + 0px) 0 0 var(--frame); }
+.panel::after { left: -2px; bottom: -2px; box-shadow: calc(100% + 0px) 0 0 var(--frame); }
+.panelTab {
+  position: absolute;
+  top: -12px; left: 18px;
+  padding: 3px 10px;
+  background: var(--screen);
+  border: 2px solid var(--frame);
+  font-family: var(--font-pixel-en);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--frame);
+  line-height: 1.3;
+}
+
+/* ---------- ヘッダー（タイトルとメニュー） ---------- */
+.siteHeader { max-width: var(--maxw); margin: 0 auto; padding: 32px 20px 0; }
+.brandLogo {
+  display: block;
+  font-family: var(--font-pixel-en);
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--frame);
+  text-shadow: 3px 3px 0 var(--panel-2);
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+  margin-top: 16px;
+  padding: 12px 14px;
+}
+.nav a {
+  position: relative;
+  display: inline-block;
+  padding: 6px 10px 6px 24px;
+  font-family: var(--font-pixel-jp);
+  font-size: 16px;
+  line-height: 1.4;
+}
+.nav a::before { content: "▶"; position: absolute; left: 6px; top: 7px; font-size: 12px; color: var(--frame); opacity: 0; }
+.nav a.isActive::before, .nav a:hover::before, .nav a:focus-visible::before { opacity: 1; }
+.nav a.isActive { color: var(--frame); }
+.nav a:hover { color: var(--frame); }
+
+/* ---------- 共通 ---------- */
+main { max-width: var(--maxw); margin: 0 auto; padding: 28px 20px 48px; }
+.section { margin: 0 0 40px; }
+
+/* ---------- NEW（PICK UP） ---------- */
+.newsSlide { display: block; border: 2px solid var(--frame); background: var(--screen); }
+.newsSlide:hover .coverTitle { color: var(--frame); }
+.cover {
+  display: block;
+  padding: clamp(28px, 5vw, 56px) clamp(22px, 5vw, 56px);
+  background-color: var(--screen);
+  background-image: linear-gradient(rgba(146, 206, 234, 0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(146, 206, 234, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+  border-bottom: 2px solid var(--frame);
+}
+.coverTitle { display: block; font-family: var(--font-pixel-en); font-size: clamp(20px, 4.4vw, 44px); line-height: 1.6; }
+.coverTitle .cursor { display: inline-block; width: 0.6em; height: 1em; margin-left: 6px; background: var(--frame); vertical-align: -0.15em; animation: blink 1s steps(1) infinite; }
+.coverSub { display: block; margin-top: 18px; font-family: var(--font-pixel-jp); font-size: clamp(14px, 1.9vw, 19px); color: var(--muted); }
+.newsSlideBody { display: block; padding: 16px 20px 18px; }
+.newsDate { display: block; font-family: var(--font-pixel-en); font-size: 10px; color: var(--frame); letter-spacing: 0.06em; }
+.newsTitle { display: block; margin-top: 10px; font-family: var(--font-pixel-jp); font-size: 20px; line-height: 1.5; }
+
+.thumbs { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin: 16px 0 0; padding: 0; }
+.thumbs li { display: grid; }
+.thumb { display: block; padding: 12px 12px 12px; background: var(--panel-2); border: 2px solid var(--frame); }
+.thumb:hover { background: var(--panel); }
+.thumbNo { display: inline-block; padding: 2px 6px; background: var(--frame); color: var(--panel); font-family: var(--font-pixel-en); font-size: 9px; }
+.thumbTitle { display: block; margin-top: 10px; font-family: var(--font-pixel-jp); font-size: 14px; line-height: 1.45; }
+.thumbSub { display: block; margin-top: 4px; font-size: 11px; color: var(--muted); line-height: 1.55; }
+
+.moreWrap { margin: 20px 0 0; text-align: center; }
+.pixelBtn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: var(--panel-2);
+  border: 2px solid var(--frame);
+  box-shadow: 4px 4px 0 var(--frame);
+  font-family: var(--font-pixel-jp);
+  font-size: 16px;
+}
+.pixelBtn:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--frame); }
+
+/* ---------- メッセージウィンドウ（紹介） ---------- */
+.message { position: relative; padding-right: 40px; }
+.message p { margin: 0; font-family: var(--font-pixel-jp); font-size: 17px; line-height: 1.9; }
+.message .next { position: absolute; right: 16px; bottom: 12px; color: var(--frame); font-size: 12px; animation: blink 1.2s steps(1) infinite; }
+
+/* ---------- STATUS（案内） ---------- */
+.deck { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 22px; margin-top: 6px; }
+.card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 10px 12px 26px;
+  border-bottom: 2px dotted var(--panel-2);
+}
+.card::before { content: "▶"; position: absolute; left: 4px; top: 15px; font-size: 12px; color: var(--frame); opacity: 0; }
+.card:hover::before, .card:focus-visible::before { opacity: 1; }
+.card:hover .cardTitle { color: var(--frame); }
+.cardTitle { display: block; font-family: var(--font-pixel-jp); font-size: 19px; line-height: 1.3; }
+.cardDesc { display: block; margin-top: 6px; font-size: 12.5px; line-height: 1.65; color: var(--muted); }
+.cardArrow { font-family: var(--font-pixel-en); font-size: 12px; color: var(--frame); }
+
+/* ---------- ステータスバー（フッター） ---------- */
+.statusBar { max-width: var(--maxw); margin: 0 auto 32px; padding: 14px 18px; }
+.statusRow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; }
+.statusRow .label { font-family: var(--font-pixel-en); font-size: 9px; color: var(--frame); letter-spacing: 0.06em; }
+.footNav { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.footNav a { font-family: var(--font-pixel-jp); font-size: 15px; }
+.footNav a:hover { color: var(--frame); }
+.footPills { display: flex; gap: 10px; margin: 0; margin-left: auto; }
+.pill { display: inline-block; padding: 6px 12px; border: 2px solid var(--frame); font-family: var(--font-pixel-en); font-size: 9px; }
+.pill:hover { background: var(--frame); color: var(--panel); }
+.footMeta { margin: 12px 0 0; padding-top: 10px; border-top: 2px dotted var(--panel-2); font-size: 11px; color: var(--muted); }
+.footMeta span { font-family: var(--font-pixel-en); font-size: 9px; margin-left: 12px; }
+
+@keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .coverTitle .cursor, .message .next { animation: none; } }
+
+/* ---------- レスポンシブ ---------- */
+@media (max-width: 900px) { .thumbs { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 640px) {
+  .siteHeader { padding: 22px 12px 0; }
+  .brandLogo { font-size: 15px; }
+  .nav a { font-size: 15px; padding: 6px 8px 6px 22px; }
+  main { padding: 20px 12px 36px; }
+  .panel { padding: 18px 14px; }
+  .thumbs { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .deck { grid-template-columns: 1fr; }
+  .footPills { margin-left: 0; }
+}
