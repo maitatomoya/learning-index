@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tomoya Maita 公式サイト｜作って、動かして、学ぶ学習サービス</title>
-  <meta name="description" content="元教員のエンジニアTomoya Maitaが個人で開発・運用している学習Webサービス（200 Stepsシリーズ、アーキテクチャ学習、Webセキュリティ）とブログの入口。">
+  <title>Tomoya Maita 公式サイト</title>
+  <meta name="description" content="元教員のエンジニアTomoya Maitaの公式サイト。個人で開発・運用している学習Webサービス、作品、プロフィール、ブログの入口。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
   <a class="skipLink" href="#pickup">本文へスキップ</a>
 
   <header class="siteHeader" aria-label="サイトヘッダー">
-    <a class="brand" href="#top" aria-label="Tomoya Maita 公式サイト トップへ">
+    <a class="brand" href="./" aria-label="Tomoya Maita 公式サイト トップへ">
       <span class="brandLogo">Tomoya Maita</span>
     </a>
     <div class="navScrim" id="navScrim" aria-hidden="true"></div>
@@ -23,10 +23,10 @@
         <span class="navDrawerTitle" aria-hidden="true">Menu</span>
         <button class="navClose" type="button" id="navClose" aria-label="メニューを閉じる">×</button>
       </div>
-      <a class="isActive" aria-current="page" href="#top">ホーム</a>
-      <a href="#steps">教材</a>
-      <a href="#arch">クラウド</a>
-      <a href="#security">セキュリティ</a>
+      <a class="isActive" aria-current="page" href="./">ホーム</a>
+      <a href="about.html">プロフィール</a>
+      <a href="learn.html">学び</a>
+      <a href="works.html">作品</a>
       <a href="https://mt-dev-io.pages.dev">ブログ</a>
       <a href="https://github.com/maitatomoya">GitHub</a>
     </nav>
@@ -41,7 +41,7 @@
   </header>
 
   <main id="top">
-    <h1 class="srOnly">Tomoya Maita 公式サイト｜作って、動かして、学ぶ学習サービス</h1>
+    <h1 class="srOnly">Tomoya Maita 公式サイト</h1>
 
     <!-- PICK UP -->
     <section class="section newsFeed" id="pickup" aria-labelledby="pickup-title">
@@ -84,17 +84,17 @@
           </a>
         </li>
         <li>
-          <a class="thumb" href="https://aws-architecture-patterns.pages.dev">
-            <span class="cover cover-mini cover-aws" aria-hidden="true"><span class="coverMiniTitle">AWS Architecture Patterns</span><span class="coverMiniSub">公式アイコンで描く50ケース</span></span>
+          <a class="thumb" href="https://sapor.mt114r-an.workers.dev">
+            <span class="cover cover-mini cover-sapor" aria-hidden="true"><span class="coverMiniTitle">Sapor</span><span class="coverMiniSub">Webデザインを言語化するカタログ</span></span>
             <span class="thumbNo">04</span>
-            <span class="srOnly">AWS Architecture Patterns</span>
+            <span class="srOnly">Sapor</span>
           </a>
         </li>
         <li>
-          <a class="thumb" href="https://cpp-200-steps.pages.dev">
-            <span class="cover cover-mini cover-cpp" aria-hidden="true"><span class="coverMiniTitle">C++ 200 Steps</span><span class="coverMiniSub">ブラウザで書いて、その場で実行</span></span>
+          <a class="thumb" href="https://pixsmith.pages.dev">
+            <span class="cover cover-mini cover-pixsmith" aria-hidden="true"><span class="coverMiniTitle">Pixsmith</span><span class="coverMiniSub">アイコン・ピクセルロゴメーカー</span></span>
             <span class="thumbNo">05</span>
-            <span class="srOnly">C++ 200 Steps</span>
+            <span class="srOnly">Pixsmith</span>
           </a>
         </li>
       </ol>
@@ -105,123 +105,57 @@
     </section>
 
     <section class="section homeIntro" aria-label="紹介">
-      <p>「作って、動かして、学ぶ」学習Webサービスを個人で開発・運用している、元教員のエンジニアTomoya Maitaの公式サイト。</p>
+      <p>「作って、動かして、学ぶ」を軸に、学習Webサービスとプロダクトを個人で開発・運用している、元教員のエンジニアTomoya Maitaの公式サイト。</p>
     </section>
 
-    <!-- サービス案内 -->
+    <!-- 案内 -->
     <section class="section deckWrap" id="guide" aria-labelledby="guide-title">
-      <h2 class="deckTitle" id="guide-title"><span>サービス案内</span></h2>
-
-      <h3 class="deckSub" id="steps">200 Stepsシリーズ <small>ブラウザ上で書いて実行して学ぶステップ教材</small></h3>
+      <h2 class="deckTitle" id="guide-title"><span>案内</span></h2>
       <div class="deck">
-        <a class="card c-yellow" href="https://cpp-200-steps.pages.dev">
-          <span class="cardGlyph" aria-hidden="true">C++</span>
+        <a class="card c-yellow" href="learn.html">
+          <span class="cardGlyph" aria-hidden="true">学</span>
           <span class="cardBody">
-            <span class="cardTitle">C++ 200 STEPS</span>
-            <span class="cardDesc">C++を基礎から250ステップ。ブラウザで書いて、その場で実行。</span>
+            <span class="cardTitle">学び</span>
+            <span class="cardDesc">ブラウザで書いて動かす200 Stepsシリーズ、クラウド設計のケーススタディ、Webセキュリティ。学習サービス11本。</span>
           </span>
           <span class="cardArrow" aria-hidden="true">→</span>
         </a>
-        <a class="card c-pink" href="https://rust-200-steps.pages.dev">
-          <span class="cardGlyph" aria-hidden="true">Rs</span>
+        <a class="card c-pink" href="works.html">
+          <span class="cardGlyph" aria-hidden="true">作</span>
           <span class="cardBody">
-            <span class="cardTitle">RUST 200 STEPS</span>
-            <span class="cardDesc">所有権もコードを動かしながら身につける250ステップ。</span>
+            <span class="cardTitle">作品</span>
+            <span class="cardDesc">デザインカタログのSapor、ピクセルロゴメーカーのPixsmithなど、学習サービス以外のプロダクト。</span>
           </span>
           <span class="cardArrow" aria-hidden="true">→</span>
         </a>
-        <a class="card c-cyan" href="https://go-200-steps.pages.dev">
-          <span class="cardGlyph" aria-hidden="true">Go</span>
+        <a class="card c-cyan" href="about.html">
+          <span class="cardGlyph" aria-hidden="true">Me</span>
           <span class="cardBody">
-            <span class="cardTitle">GO 200 STEPS</span>
-            <span class="cardDesc">シンプルな文法を順に書いて確かめる250ステップ。</span>
+            <span class="cardTitle">プロフィール</span>
+            <span class="cardDesc">元教員のエンジニア。教育とAIとエンジニアリングの重なるところで、作りながら学んでいます。</span>
           </span>
           <span class="cardArrow" aria-hidden="true">→</span>
         </a>
-        <a class="card c-pink" href="https://php-200-steps.pages.dev">
-          <span class="cardGlyph" aria-hidden="true">PHP</span>
+        <a class="card c-pink" href="learn.html#steps">
+          <span class="cardGlyph" aria-hidden="true">200</span>
           <span class="cardBody">
-            <span class="cardTitle">PHP 200 STEPS</span>
-            <span class="cardDesc">Webでよく使う書き方を実行しながら学ぶ250ステップ。</span>
+            <span class="cardTitle">200 Steps</span>
+            <span class="cardDesc">C++、Rust、Go、PHP、JavaScript、Stimulus、Python。言語ごとに250ステップを積み上げる看板シリーズ。</span>
           </span>
           <span class="cardArrow" aria-hidden="true">→</span>
         </a>
-        <a class="card c-cyan" href="https://javascript-200-steps.pages.dev">
-          <span class="cardGlyph" aria-hidden="true">JS</span>
+        <a class="card c-cyan" href="https://mt-dev-io.pages.dev">
+          <span class="cardGlyph" aria-hidden="true">Blog</span>
           <span class="cardBody">
-            <span class="cardTitle">JAVASCRIPT 200 STEPS</span>
-            <span class="cardDesc">ブラウザの言語をブラウザで学ぶ250ステップ。</span>
+            <span class="cardTitle">ブログ</span>
+            <span class="cardDesc">サービスの裏側の試行錯誤と、日々の技術記事。いま何をしているかはここ。</span>
           </span>
           <span class="cardArrow" aria-hidden="true">→</span>
         </a>
-        <a class="card c-yellow" href="https://stimulus-200-steps.pages.dev">
-          <span class="cardGlyph" aria-hidden="true">St</span>
-          <span class="cardBody">
-            <span class="cardTitle">STIMULUS 200 STEPS</span>
-            <span class="cardDesc">Hotwire系フレームワークStimulusを基礎から250ステップ。</span>
-          </span>
-          <span class="cardArrow" aria-hidden="true">→</span>
-        </a>
-        <a class="card c-cyan" href="https://python-200-steps.pages.dev">
-          <span class="cardGlyph" aria-hidden="true">Py</span>
-          <span class="cardBody">
-            <span class="cardTitle">PYTHON 200 STEPS</span>
-            <span class="cardDesc">エラーを読んで直す50問つき。250ステップで基礎から中級へ。</span>
-          </span>
-          <span class="cardArrow" aria-hidden="true">→</span>
-        </a>
-      </div>
-
-      <h3 class="deckSub" id="arch">アーキテクチャ学習 <small>要件からクラウドの構成を考えるケーススタディ</small></h3>
-      <div class="deck">
-        <a class="card c-yellow" href="https://aws-architecture-patterns.pages.dev">
-          <span class="cardGlyph" aria-hidden="true">AWS</span>
-          <span class="cardBody">
-            <span class="cardTitle">AWS PATTERNS</span>
-            <span class="cardDesc">50ケースで学ぶAWS構成。要件を読み、設計を考えてから解説で確かめる。</span>
-          </span>
-          <span class="cardArrow" aria-hidden="true">→</span>
-        </a>
-        <a class="card c-pink" href="https://cloudflare-architecture-patterns.pages.dev">
-          <span class="cardGlyph" aria-hidden="true">CF</span>
-          <span class="cardBody">
-            <span class="cardTitle">CLOUDFLARE PATTERNS</span>
-            <span class="cardDesc">Cloudflareの主要サービスと構成パターンを公式ドキュメントベースで。</span>
-          </span>
-          <span class="cardArrow" aria-hidden="true">→</span>
-        </a>
-        <a class="card c-cyan" href="https://gcp-architecture-patterns.pages.dev">
-          <span class="cardGlyph" aria-hidden="true">GCP</span>
-          <span class="cardBody">
-            <span class="cardTitle">GCP PATTERNS</span>
-            <span class="cardDesc">Cloud RunやBigQueryを軸に、50ケースで構成を考える。</span>
-          </span>
-          <span class="cardArrow" aria-hidden="true">→</span>
-        </a>
-      </div>
-
-      <h3 class="deckSub" id="security">セキュリティとブログ <small>守る側の視点と、開発の裏側</small></h3>
-      <div class="deck">
-        <a class="card c-pink" href="https://web-security-patterns.pages.dev">
-          <span class="cardGlyph" aria-hidden="true">SEC</span>
-          <span class="cardBody">
-            <span class="cardTitle">WEB SECURITY</span>
-            <span class="cardDesc">攻撃の仕組みと、脆弱なコード／修正コードの比較で学ぶ15トピック。</span>
-          </span>
-          <span class="cardArrow" aria-hidden="true">→</span>
-        </a>
-        <a class="card c-yellow" href="https://mt-dev-io.pages.dev">
-          <span class="cardGlyph" aria-hidden="true">BLOG</span>
-          <span class="cardBody">
-            <span class="cardTitle">BLOG</span>
-            <span class="cardDesc">学習サービスの背景にある試行錯誤と、日々の技術記事。</span>
-          </span>
-          <span class="cardArrow" aria-hidden="true">→</span>
-        </a>
-        <a class="card c-cyan" href="https://github.com/maitatomoya">
+        <a class="card c-yellow" href="https://github.com/maitatomoya">
           <span class="cardGlyph" aria-hidden="true">GH</span>
           <span class="cardBody">
-            <span class="cardTitle">GITHUB</span>
+            <span class="cardTitle">GitHub</span>
             <span class="cardDesc">各サービスのソースコード。教材データと検証スクリプトも公開。</span>
           </span>
           <span class="cardArrow" aria-hidden="true">→</span>
@@ -232,9 +166,9 @@
 
   <footer class="siteFooter">
     <nav class="footNav" aria-label="フッターナビゲーション">
-      <a href="#steps">教材</a>
-      <a href="#arch">クラウド</a>
-      <a href="#security">セキュリティ</a>
+      <a href="about.html">プロフィール</a>
+      <a href="learn.html">学び</a>
+      <a href="works.html">作品</a>
       <a href="https://mt-dev-io.pages.dev">ブログ</a>
     </nav>
     <p class="footPills">
@@ -245,26 +179,6 @@
     <p class="footCopy">© 2026 Tomoya Maita</p>
   </footer>
 
-  <script>
-    // モバイル用メニューの開閉。CSSだけでも閲覧は成立するため、失敗しても本文には影響しない
-    (function () {
-      var nav = document.getElementById("siteNav");
-      var toggle = document.getElementById("navToggle");
-      var close = document.getElementById("navClose");
-      var scrim = document.getElementById("navScrim");
-      if (!nav || !toggle) return;
-      function setOpen(open) {
-        nav.classList.toggle("isOpen", open);
-        scrim.classList.toggle("isOpen", open);
-        toggle.setAttribute("aria-expanded", open ? "true" : "false");
-        document.body.classList.toggle("navLock", open);
-      }
-      toggle.addEventListener("click", function () { setOpen(!nav.classList.contains("isOpen")); });
-      close.addEventListener("click", function () { setOpen(false); });
-      scrim.addEventListener("click", function () { setOpen(false); });
-      nav.addEventListener("click", function (e) { if (e.target.tagName === "A") setOpen(false); });
-      document.addEventListener("keydown", function (e) { if (e.key === "Escape") setOpen(false); });
-    })();
-  </script>
+  <script src="nav.js"></script>
 </body>
 </html>

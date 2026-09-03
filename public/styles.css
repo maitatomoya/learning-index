@@ -339,6 +339,52 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 24px 24px 64px; }
   padding-left: 10px;
 }
 
+/* ---------- 下層ページ共通 ---------- */
+.pageHead { margin: 6px 0 36px; }
+.pageHead .deckTitle { margin-bottom: 10px; }
+.pageTitle {
+  margin: 0 0 12px;
+  font-size: clamp(30px, 4.6vw, 44px);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--ink);
+}
+.pageLead { max-width: 720px; margin: 0; font-size: 15px; }
+.textLink { text-decoration: underline; text-underline-offset: 4px; font-weight: 700; }
+.textLink:hover { background: var(--yellow); }
+
+.paperGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.paperCard {
+  padding: 20px 20px 18px;
+  background: var(--paper);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.paperTag {
+  --stripe: var(--yellow);
+  display: inline-block;
+  padding: 3px 12px;
+  background: var(--stripe);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.paperTitle { margin: 12px 0 8px; font-size: 16px; font-weight: 700; color: var(--ink); }
+.paperText { margin: 0; font-size: 13.5px; line-height: 1.7; }
+
+.plainList { margin: 0; padding-left: 1.3em; font-size: 15px; }
+.plainList li { margin-bottom: 10px; }
+.pillRow { display: flex; flex-wrap: wrap; gap: 12px; margin: 0; }
+
+.cover-sapor { background-color: #3b2a4a; color: #ffd9a8; }
+.cover-pixsmith { background-color: #1f3b2e; color: #c9f5d6; }
+
 /* ---------- フッター ---------- */
 .siteFooter {
   position: relative;

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>プロフィール｜Tomoya Maita 公式サイト</title>
+  <meta name="description" content="元教員のエンジニアTomoya Maitaのプロフィール。教育とAIとエンジニアリングの重なるところで、学習Webサービスとプロダクトを作っています。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skipLink" href="#main">本文へスキップ</a>
+
+  <header class="siteHeader" aria-label="サイトヘッダー">
+    <a class="brand" href="./" aria-label="Tomoya Maita 公式サイト トップへ">
+      <span class="brandLogo">Tomoya Maita</span>
+    </a>
+    <div class="navScrim" id="navScrim" aria-hidden="true"></div>
+    <nav class="nav" id="siteNav" aria-label="主要ナビゲーション">
+      <div class="navDrawerHead">
+        <span class="navDrawerTitle" aria-hidden="true">Menu</span>
+        <button class="navClose" type="button" id="navClose" aria-label="メニューを閉じる">×</button>
+      </div>
+      <a href="./">ホーム</a>
+      <a class="isActive" aria-current="page" href="about.html">プロフィール</a>
+      <a href="learn.html">学び</a>
+      <a href="works.html">作品</a>
+      <a href="https://mt-dev-io.pages.dev">ブログ</a>
+      <a href="https://github.com/maitatomoya">GitHub</a>
+    </nav>
+    <div class="langSwitch" role="group" aria-label="Language">
+      <span class="langBtn isActive" aria-current="true">JP</span>
+    </div>
+    <button class="navToggle" type="button" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="メニューを開く">
+      <span class="navToggleBar"></span>
+      <span class="navToggleBar"></span>
+      <span class="navToggleBar"></span>
+    </button>
+  </header>
+
+  <main id="main">
+    <div class="pageHead">
+      <p class="deckTitle"><span>PROFILE</span></p>
+      <h1 class="pageTitle">Tomoya Maita</h1>
+      <p class="pageLead">
+        元教員のエンジニア。学校教育の現場を経てソフトウェア開発に進み、
+        「作って、動かして、学ぶ」を軸に、学習Webサービスとプロダクトを個人で開発・運用しています。
+      </p>
+    </div>
+
+    <section class="section" aria-labelledby="axis">
+      <h2 class="deckSub" id="axis">軸 <small>教育とAIとエンジニアリングの重なるところ</small></h2>
+      <div class="paperGrid">
+        <div class="paperCard">
+          <span class="paperTag c-yellow">教育</span>
+          <h3 class="paperTitle">「わかる」までの道筋を設計する</h3>
+          <p class="paperText">教員として、つまずく場所と越え方を見てきました。教材は読んで終わりではなく、手を動かして確かめる順番で組み立てます。</p>
+        </div>
+        <div class="paperCard">
+          <span class="paperTag c-pink">AI</span>
+          <h3 class="paperTitle">AIを制作の相棒にする</h3>
+          <p class="paperText">教材づくりも実装も、AIと並走して量を出し、検証で品質を担保します。その過程はブログに記録しています。</p>
+        </div>
+        <div class="paperCard">
+          <span class="paperTag c-cyan">エンジニアリング</span>
+          <h3 class="paperTitle">小さく作って、公開して、運用する</h3>
+          <p class="paperText">依存の少ない構成で作り、ブラウザだけで使える形で公開します。動いているものを見せることを大事にしています。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="doing">
+      <h2 class="deckSub" id="doing">やっていること</h2>
+      <ul class="plainList">
+        <li><strong>学習Webサービスの開発・運用</strong>：200 Stepsシリーズ（7言語）、AWS／Cloudflare／GCPのアーキテクチャ学習、Webセキュリティ教材。<a class="textLink" href="learn.html">学びのページへ</a></li>
+        <li><strong>プロダクト制作</strong>：デザインカタログのSapor、ピクセルロゴメーカーのPixsmithなど。<a class="textLink" href="works.html">作品のページへ</a></li>
+        <li><strong>発信</strong>：開発の裏側と技術記事を<a class="textLink" href="https://mt-dev-io.pages.dev">ブログ</a>に、ソースコードを<a class="textLink" href="https://github.com/maitatomoya">GitHub</a>に公開。</li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="links">
+      <h2 class="deckSub" id="links">リンク</h2>
+      <p class="pillRow">
+        <a class="pillBtn" href="https://github.com/maitatomoya">GitHub <span aria-hidden="true">↗</span></a>
+        <a class="pillBtn" href="https://mt-dev-io.pages.dev">Blog <span aria-hidden="true">↗</span></a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="siteFooter">
+    <nav class="footNav" aria-label="フッターナビゲーション">
+      <a href="about.html">プロフィール</a>
+      <a href="learn.html">学び</a>
+      <a href="works.html">作品</a>
+      <a href="https://mt-dev-io.pages.dev">ブログ</a>
+    </nav>
+    <p class="footPills">
+      <a class="pill" href="https://github.com/maitatomoya">GitHub</a>
+      <a class="pill" href="https://mt-dev-io.pages.dev">Blog</a>
+    </p>
+    <p class="footNote">掲載しているサービスはすべて個人で開発・運用しています。</p>
+    <p class="footCopy">© 2026 Tomoya Maita</p>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>
