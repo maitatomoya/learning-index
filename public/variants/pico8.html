@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tomoya Maita 公式サイト（PICO-8版）</title>
+  <meta name="robots" content="noindex">
+  <meta name="description" content="元教員のエンジニアTomoya Maitaの公式サイト。個人で開発・運用している学習Webサービス、作品、プロフィール、ブログの入口。">
+  <link rel="stylesheet" href="pico8.css">
+</head>
+<body>
+  <a class="p8-skip" href="#pickup">本文へスキップ</a>
+
+  <div class="p8-shell">
+    <ul class="p8-colorbar" aria-hidden="true">
+      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+    </ul>
+
+    <header class="p8-header" aria-label="サイトヘッダー">
+      <a class="p8-brand" href="./" aria-label="Tomoya Maita 公式サイト トップへ">
+        <span class="p8-logo">Tomoya Maita</span>
+      </a>
+      <div class="p8-scrim" id="navScrim" aria-hidden="true"></div>
+      <nav class="p8-nav" id="siteNav" aria-label="主要ナビゲーション">
+        <div class="p8-navHead">
+          <span class="p8-navHeadTitle" aria-hidden="true">MENU</span>
+          <button class="p8-navClose" type="button" id="navClose" aria-label="メニューを閉じる">X</button>
+        </div>
+        <a class="p8-navLink isActive" aria-current="page" href="./">ホーム</a>
+        <a class="p8-navLink" href="../about.html">プロフィール</a>
+        <a class="p8-navLink" href="../learn.html">学び</a>
+        <a class="p8-navLink" href="../works.html">作品</a>
+        <a class="p8-navLink" href="https://mt-dev-io.pages.dev">ブログ</a>
+        <a class="p8-navLink" href="https://github.com/maitatomoya">GitHub</a>
+      </nav>
+      <div class="p8-lang" role="group" aria-label="Language">
+        <span class="p8-langBtn" aria-current="true">JP</span>
+      </div>
+      <button class="p8-navToggle" type="button" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main id="top">
+      <h1 class="srOnly">Tomoya Maita 公式サイト</h1>
+
+      <!-- PICK UP -->
+      <section class="p8-section" id="pickup" aria-labelledby="pickup-title">
+        <h2 class="p8-deckTitle" id="pickup-title"><span>NEW</span></h2>
+
+        <a class="p8-newsSlide" href="https://python-200-steps.pages.dev">
+          <span class="p8-newsPic">
+            <span class="p8-cover p8-cover--hero" aria-hidden="true">
+              <span class="p8-coverTitle">Python<br>200 Steps</span>
+              <span class="p8-coverBar"></span>
+              <span class="p8-coverSub">コードを直して、その場で実行。250ステップで基礎から中級へ</span>
+            </span>
+          </span>
+          <span class="p8-newsBody">
+            <time class="p8-newsDate" datetime="2026-09-03">2026年9月3日</time>
+            <span class="p8-newsTitle">『Python 200 Steps』を公開しました</span>
+          </span>
+        </a>
+
+        <ol class="p8-thumbs" aria-label="最近の公開">
+          <li>
+            <a class="p8-thumb" href="https://python-200-steps.pages.dev">
+              <span class="p8-cover p8-cover--mini p8-cover--python" aria-hidden="true">
+                <span class="p8-coverMiniTitle">Python 200 Steps</span>
+                <span class="p8-coverMiniSub">エラーを読んで直す50問つき</span>
+              </span>
+              <span class="p8-thumbNo">01</span>
+              <span class="srOnly">Python 200 Steps</span>
+            </a>
+          </li>
+          <li>
+            <a class="p8-thumb" href="https://gcp-architecture-patterns.pages.dev">
+              <span class="p8-cover p8-cover--mini p8-cover--gcp" aria-hidden="true">
+                <span class="p8-coverMiniTitle">GCP Architecture Patterns</span>
+                <span class="p8-coverMiniSub">50ケースで構成を考える</span>
+              </span>
+              <span class="p8-thumbNo">02</span>
+              <span class="srOnly">GCP Architecture Patterns</span>
+            </a>
+          </li>
+          <li>
+            <a class="p8-thumb" href="https://web-security-patterns.pages.dev">
+              <span class="p8-cover p8-cover--mini p8-cover--sec" aria-hidden="true">
+                <span class="p8-coverMiniTitle">Web Security Patterns</span>
+                <span class="p8-coverMiniSub">攻撃の仕組みと修正コード</span>
+              </span>
+              <span class="p8-thumbNo">03</span>
+              <span class="srOnly">Web Security Patterns</span>
+            </a>
+          </li>
+          <li>
+            <a class="p8-thumb" href="https://sapor.mt114r-an.workers.dev">
+              <span class="p8-cover p8-cover--mini p8-cover--sapor" aria-hidden="true">
+                <span class="p8-coverMiniTitle">Sapor</span>
+                <span class="p8-coverMiniSub">Webデザインを言語化するカタログ</span>
+              </span>
+              <span class="p8-thumbNo">04</span>
+              <span class="srOnly">Sapor</span>
+            </a>
+          </li>
+          <li>
+            <a class="p8-thumb" href="https://pixsmith.pages.dev">
+              <span class="p8-cover p8-cover--mini p8-cover--pixsmith" aria-hidden="true">
+                <span class="p8-coverMiniTitle">Pixsmith</span>
+                <span class="p8-coverMiniSub">アイコン・ピクセルロゴメーカー</span>
+              </span>
+              <span class="p8-thumbNo">05</span>
+              <span class="srOnly">Pixsmith</span>
+            </a>
+          </li>
+        </ol>
+
+        <p class="p8-more">
+          <a class="p8-pillBtn" href="https://mt-dev-io.pages.dev">もっと見る ― 開発ブログ <span aria-hidden="true">&gt;&gt;</span></a>
+        </p>
+      </section>
+
+      <section class="p8-section p8-intro" aria-label="紹介">
+        <p>「作って、動かして、学ぶ」を軸に、学習Webサービスとプロダクトを個人で開発・運用している、元教員のエンジニアTomoya Maitaの公式サイト。</p>
+      </section>
+
+      <!-- 案内 -->
+      <section class="p8-section" id="guide" aria-labelledby="guide-title">
+        <h2 class="p8-deckTitle" id="guide-title"><span>MENU</span></h2>
+        <div class="p8-deck">
+          <a class="p8-card c-yellow" href="../learn.html">
+            <span class="p8-cardGlyph" aria-hidden="true">学</span>
+            <span class="p8-cardBody">
+              <span class="p8-cardTitle">学び</span>
+              <span class="p8-cardDesc">ブラウザで書いて動かす200 Stepsシリーズ、クラウド設計のケーススタディ、Webセキュリティ。学習サービス11本。</span>
+            </span>
+            <span class="p8-cardArrow" aria-hidden="true">&gt;</span>
+          </a>
+          <a class="p8-card c-pink" href="../works.html">
+            <span class="p8-cardGlyph" aria-hidden="true">作</span>
+            <span class="p8-cardBody">
+              <span class="p8-cardTitle">作品</span>
+              <span class="p8-cardDesc">デザインカタログのSapor、ピクセルロゴメーカーのPixsmithなど、学習サービス以外のプロダクト。</span>
+            </span>
+            <span class="p8-cardArrow" aria-hidden="true">&gt;</span>
+          </a>
+          <a class="p8-card c-cyan" href="../about.html">
+            <span class="p8-cardGlyph" aria-hidden="true">Me</span>
+            <span class="p8-cardBody">
+              <span class="p8-cardTitle">プロフィール</span>
+              <span class="p8-cardDesc">元教員のエンジニア。教育とAIとエンジニアリングの重なるところで、作りながら学んでいます。</span>
+            </span>
+            <span class="p8-cardArrow" aria-hidden="true">&gt;</span>
+          </a>
+          <a class="p8-card c-pink" href="../learn.html#steps">
+            <span class="p8-cardGlyph" aria-hidden="true">200</span>
+            <span class="p8-cardBody">
+              <span class="p8-cardTitle">200 Steps</span>
+              <span class="p8-cardDesc">C++、Rust、Go、PHP、JavaScript、Stimulus、Python。言語ごとに250ステップを積み上げる看板シリーズ。</span>
+            </span>
+            <span class="p8-cardArrow" aria-hidden="true">&gt;</span>
+          </a>
+          <a class="p8-card c-cyan" href="https://mt-dev-io.pages.dev">
+            <span class="p8-cardGlyph" aria-hidden="true">Blog</span>
+            <span class="p8-cardBody">
+              <span class="p8-cardTitle">ブログ</span>
+              <span class="p8-cardDesc">サービスの裏側の試行錯誤と、日々の技術記事。いま何をしているかはここ。</span>
+            </span>
+            <span class="p8-cardArrow" aria-hidden="true">&gt;</span>
+          </a>
+          <a class="p8-card c-yellow" href="https://github.com/maitatomoya">
+            <span class="p8-cardGlyph" aria-hidden="true">GH</span>
+            <span class="p8-cardBody">
+              <span class="p8-cardTitle">GitHub</span>
+              <span class="p8-cardDesc">各サービスのソースコード。教材データと検証スクリプトも公開。</span>
+            </span>
+            <span class="p8-cardArrow" aria-hidden="true">&gt;</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="p8-footer">
+      <nav class="p8-footNav" aria-label="フッターナビゲーション">
+        <a href="../about.html">プロフィール</a>
+        <a href="../learn.html">学び</a>
+        <a href="../works.html">作品</a>
+        <a href="https://mt-dev-io.pages.dev">ブログ</a>
+      </nav>
+      <p class="p8-footPills">
+        <a class="p8-pill" href="https://github.com/maitatomoya">GitHub</a>
+        <a class="p8-pill" href="https://mt-dev-io.pages.dev">Blog</a>
+      </p>
+      <p class="p8-footNote">掲載しているサービスはすべて個人で開発・運用しています。</p>
+      <p class="p8-footCopy">&copy; 2026 Tomoya Maita</p>
+    </footer>
+  </div>
+
+  <script src="pico8.js"></script>
+</body>
+</html>

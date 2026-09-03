@@ -45,6 +45,13 @@ node server.js
 | `works.html`（作品） | 学習サービス以外のプロダクト（Sapor、Pixsmith、this_is_pen） |
 | `about.html`（プロフィール） | 軸（教育・AI・エンジニアリング）、やっていること、リンク |
 
+## デザイン別バージョン（検討用）
+
+`public/variants/` に、ホームの内容そのままで雰囲気だけを変えた7バージョンを置いている（Undertale／Stardew Valley／PICO-8／Lospec／DOTOWN／Pixel Art Academy／Poolsuite）。
+`public/variants/index.html` がサムネイル付きの一覧。本線のデザインは変えず、今後の雰囲気変更の検討材料として残している（一覧・各版とも `noindex`）。
+
+デザインの好みと参考サイトの記録は `docs/design-ideal.md` と `docs/design-references.md` を参照。
+
 ## ディレクトリ構成
 
 ```
@@ -56,7 +63,12 @@ learning-portal/
 │   ├── works.html     # 作品
 │   ├── about.html     # プロフィール
 │   ├── nav.js         # モバイルメニューの開閉
-│   └── styles.css     # スタイル（全ページ共通）
+│   ├── styles.css     # スタイル（全ページ共通）
+│   └── variants/      # デザイン別バージョン（検討用、noindex）
+├── docs/
+│   ├── design-ideal.md        # 理想のサイト像のメモ
+│   ├── design-references.md   # 配色の参考サイト一覧
+│   └── screenshots/
 └── README.md
 ```
 
