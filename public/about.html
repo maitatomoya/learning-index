@@ -1,109 +1,309 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>プロフィール｜Tomoya Maita 公式サイト</title>
-  <meta name="description" content="元教員のエンジニアTomoya Maitaのプロフィール。教育とAIとエンジニアリングの重なるところで、学習Webサービスとプロダクトを作っています。">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <a class="skipLink" href="#main">本文へスキップ</a>
-
-  <header class="siteHeader" aria-label="サイトヘッダー">
-    <a class="brand" href="./" aria-label="Tomoya Maita 公式サイト トップへ">
-      <span class="brandLogo">Tomoya Maita</span>
-    </a>
-    <div class="navScrim" id="navScrim" aria-hidden="true"></div>
-    <nav class="nav" id="siteNav" aria-label="主要ナビゲーション">
-      <div class="navDrawerHead">
-        <span class="navDrawerTitle" aria-hidden="true">Menu</span>
-        <button class="navClose" type="button" id="navClose" aria-label="メニューを閉じる">×</button>
-      </div>
-      <a href="./">ホーム</a>
-      <a class="isActive" aria-current="page" href="about.html">プロフィール</a>
-      <a href="learn.html">学び</a>
-      <a href="works.html">作品</a>
-      <a href="https://mt-dev-io.pages.dev">ブログ</a>
-      <a href="https://github.com/maitatomoya">GitHub</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="元教員のエンジニアTomoya Maitaのプロフィール。教育とAIとエンジニアリングの重なるところで、学習Webサービスとプロダクトを作っています。"
+    />
+    <title>プロフィール｜Tomoya Maita</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="desktop.js" defer></script>
+  </head>
+  <body class="desktop retro subpage">
+    <a class="skip" href="#main">本文へスキップ</a>
+    <header class="os-menu">
+      <a class="os-brand" href="index.html" aria-label="ホームへ">TM</a
+      ><strong>Tomoya Personal Computer</strong>
+      <nav aria-label="主要ナビゲーション">
+        <a href="index.html">ホーム</a
+        ><a href="about.html" aria-current="page">プロフィール</a
+        ><a href="learn.html">学び</a><a href="works.html">作品</a
+        ><a href="https://mt-dev-io.pages.dev">ブログ</a
+        ><a href="https://github.com/maitatomoya">GitHub</a>
+      </nav>
+      <span class="menu-right mono">DESKTOP EDITION / 2026</span>
+    </header>
+    <nav class="desktop-shortcuts" aria-label="デスクトップのショートカット">
+      <a href="index.html"
+        ><span class="shortcut-icon" aria-hidden="true">TM</span
+        ><span>ホーム</span></a
+      ><a href="about.html" aria-current="page"
+        ><span class="shortcut-icon" aria-hidden="true">TXT</span
+        ><span>プロフィール</span></a
+      ><a href="learn.html"
+        ><span class="shortcut-icon" aria-hidden="true">&gt;_</span
+        ><span>学び</span></a
+      ><a href="works.html"
+        ><span class="shortcut-icon" aria-hidden="true">C:</span
+        ><span>作品</span></a
+      ><a href="https://mt-dev-io.pages.dev"
+        ><span class="shortcut-icon" aria-hidden="true">LOG</span
+        ><span>ブログ</span></a
+      ><a href="https://github.com/maitatomoya"
+        ><span class="shortcut-icon" aria-hidden="true">{ }</span
+        ><span>GitHub</span></a
+      >
     </nav>
-    <div class="langSwitch" role="group" aria-label="Language">
-      <span class="langBtn isActive" aria-current="true">JP</span>
-    </div>
-    <button class="navToggle" type="button" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="メニューを開く">
-      <span class="navToggleBar"></span>
-      <span class="navToggleBar"></span>
-      <span class="navToggleBar"></span>
-    </button>
-  </header>
-
-  <main id="main">
-    <div class="pageHead">
-      <p class="deckTitle"><span>PROFILE</span></p>
-      <h1 class="pageTitle">Tomoya Maita</h1>
-      <p class="pageLead">
-        元教員のエンジニア。学校教育の現場を経てソフトウェア開発に進み、
-        「作って、動かして、学ぶ」を軸に、学習Webサービスとプロダクトを個人で開発・運用しています。
-      </p>
-    </div>
-
-    <section class="section" aria-labelledby="axis">
-      <h2 class="deckSub" id="axis">軸 <small>教育とAIとエンジニアリングの重なるところ</small></h2>
-      <div class="paperGrid">
-        <div class="paperCard">
-          <span class="paperTag c-yellow">教育</span>
-          <h3 class="paperTitle">「わかる」までの道筋を設計する</h3>
-          <p class="paperText">教員として、つまずく場所と越え方を見てきました。教材は読んで終わりではなく、手を動かして確かめる順番で組み立てます。</p>
+    <main class="desk-layout" id="main" tabindex="-1">
+      <div class="desk-caption mono">TOMOYA MAITA — ABOUT ME</div>
+      <div class="page-intro">
+        <div>
+          <h1>Tomoya Maita</h1>
+          <p>
+            元教員のエンジニア。学校教育の現場を経てソフトウェア開発に進み、
+            「作って、動かして、学ぶ」を軸に、学習Webサービスとプロダクトを個人で開発・運用しています。
+          </p>
         </div>
-        <div class="paperCard">
-          <span class="paperTag c-pink">AI</span>
-          <h3 class="paperTitle">AIを制作の相棒にする</h3>
-          <p class="paperText">教材づくりも実装も、AIと並走して量を出し、検証で品質を担保します。その過程はブログに記録しています。</p>
-        </div>
-        <div class="paperCard">
-          <span class="paperTag c-cyan">エンジニアリング</span>
-          <h3 class="paperTitle">小さく作って、公開して、運用する</h3>
-          <p class="paperText">依存の少ない構成で作り、ブラウザだけで使える形で公開します。動いているものを見せることを大事にしています。</p>
-        </div>
+        <nav class="section-tabs" aria-label="ページ内ナビゲーション">
+          <a href="#axis">大切にしていること</a
+          ><a href="#doing">やっていること</a><a href="#links">リンク</a>
+        </nav>
       </div>
-    </section>
-
-    <section class="section" aria-labelledby="doing">
-      <h2 class="deckSub" id="doing">やっていること</h2>
-      <ul class="plainList">
-        <li><strong>学習Webサービスの開発・運用</strong>：200 Stepsシリーズ（7言語）、AWS／Cloudflare／GCPのアーキテクチャ学習、Webセキュリティ教材。<a class="textLink" href="learn.html">学びのページへ</a></li>
-        <li><strong>プロダクト制作</strong>：デザインカタログのSapor、ピクセルロゴメーカーのPixsmithなど。<a class="textLink" href="works.html">作品のページへ</a></li>
-        <li><strong>発信</strong>：開発の裏側と技術記事を<a class="textLink" href="https://mt-dev-io.pages.dev">ブログ</a>に、ソースコードを<a class="textLink" href="https://github.com/maitatomoya">GitHub</a>に公開。</li>
-      </ul>
-    </section>
-
-    <section class="section" aria-labelledby="links">
-      <h2 class="deckSub" id="links">リンク</h2>
-      <p class="pillRow">
-        <a class="pillBtn" href="https://github.com/maitatomoya">GitHub <span aria-hidden="true">↗</span></a>
-        <a class="pillBtn" href="https://mt-dev-io.pages.dev">Blog <span aria-hidden="true">↗</span></a>
-      </p>
-    </section>
-  </main>
-
-  <footer class="siteFooter">
-    <nav class="footNav" aria-label="フッターナビゲーション">
-      <a href="about.html">プロフィール</a>
-      <a href="learn.html">学び</a>
-      <a href="works.html">作品</a>
-      <a href="https://mt-dev-io.pages.dev">ブログ</a>
+      <div class="profile-windows">
+        <section
+          class="window"
+          id="axis"
+          aria-label="大切にしていること"
+          tabindex="-1"
+        >
+          <div class="titlebar">
+            <span class="window-title">about_me.txt</span>
+            <div class="window-controls">
+              <button
+                type="button"
+                data-minimize="axis"
+                aria-controls="axis"
+                aria-label="大切にしていることを最小化"
+              >
+                <span aria-hidden="true">_</span></button
+              ><button
+                class="maximize-button"
+                type="button"
+                data-maximize="axis"
+                aria-controls="axis"
+                aria-label="大切にしていることを最大化"
+                aria-pressed="false"
+              >
+                <span aria-hidden="true">□</span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="window-content"
+            tabindex="0"
+            role="region"
+            aria-label="大切にしていることの内容"
+          >
+            <div class="window-heading">
+              <h2>教育とAIとエンジニアリングの重なるところ</h2>
+            </div>
+            <div class="paperGrid">
+              <div class="paperCard">
+                <span class="paperTag c-yellow">教育</span>
+                <h3 class="paperTitle">「わかる」までの道筋を設計する</h3>
+                <p class="paperText">
+                  教員として、つまずく場所と越え方を見てきました。教材は読んで終わりではなく、手を動かして確かめる順番で組み立てます。
+                </p>
+              </div>
+              <div class="paperCard">
+                <span class="paperTag c-pink">AI</span>
+                <h3 class="paperTitle">AIを制作の相棒にする</h3>
+                <p class="paperText">
+                  教材づくりも実装も、AIと並走して量を出し、検証で品質を担保します。その過程はブログに記録しています。
+                </p>
+              </div>
+              <div class="paperCard">
+                <span class="paperTag c-cyan">エンジニアリング</span>
+                <h3 class="paperTitle">小さく作って、公開して、運用する</h3>
+                <p class="paperText">
+                  依存の少ない構成で作り、ブラウザだけで使える形で公開します。動いているものを見せることを大事にしています。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="statusbar">作って、動かして、学ぶ。</div>
+        </section>
+        <section
+          class="window"
+          id="doing"
+          aria-label="やっていること"
+          tabindex="-1"
+        >
+          <div class="titlebar">
+            <span class="window-title">activities.txt</span>
+            <div class="window-controls">
+              <button
+                type="button"
+                data-minimize="doing"
+                aria-controls="doing"
+                aria-label="やっていることを最小化"
+              >
+                <span aria-hidden="true">_</span></button
+              ><button
+                class="maximize-button"
+                type="button"
+                data-maximize="doing"
+                aria-controls="doing"
+                aria-label="やっていることを最大化"
+                aria-pressed="false"
+              >
+                <span aria-hidden="true">□</span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="window-content"
+            tabindex="0"
+            role="region"
+            aria-label="やっていることの内容"
+          >
+            <div class="window-heading"><h2>やっていること</h2></div>
+            <ul class="plainList">
+              <li>
+                <strong>学習Webサービスの開発・運用</strong>：200
+                Stepsシリーズ（7言語）、AWS／Cloudflare／GCPのアーキテクチャ学習、Webセキュリティ教材。<a
+                  class="textLink"
+                  href="learn.html"
+                  >学びのページへ</a
+                >
+              </li>
+              <li>
+                <strong>プロダクト制作</strong
+                >：デザインカタログのSapor、ピクセルロゴメーカーのPixsmithなど。<a
+                  class="textLink"
+                  href="works.html"
+                  >作品のページへ</a
+                >
+              </li>
+              <li>
+                <strong>発信</strong>：開発の裏側と技術記事を<a
+                  class="textLink"
+                  href="https://mt-dev-io.pages.dev"
+                  >ブログ</a
+                >に、ソースコードを<a
+                  class="textLink"
+                  href="https://github.com/maitatomoya"
+                  >GitHub</a
+                >に公開。
+              </li>
+            </ul>
+          </div>
+          <div class="statusbar">学習サービス / プロダクト制作 / 発信</div>
+        </section>
+        <section class="window" id="links" aria-label="リンク" tabindex="-1">
+          <div class="titlebar">
+            <span class="window-title">bookmarks</span>
+            <div class="window-controls">
+              <button
+                type="button"
+                data-minimize="links"
+                aria-controls="links"
+                aria-label="リンクを最小化"
+              >
+                <span aria-hidden="true">_</span></button
+              ><button
+                class="maximize-button"
+                type="button"
+                data-maximize="links"
+                aria-controls="links"
+                aria-label="リンクを最大化"
+                aria-pressed="false"
+              >
+                <span aria-hidden="true">□</span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="window-content"
+            tabindex="0"
+            role="region"
+            aria-label="リンクの内容"
+          >
+            <div class="window-heading">
+              <h2>活動の記録</h2>
+              <p>ソースコードと開発の裏側はこちらから。</p>
+            </div>
+            <div class="bookmark-links">
+              <a class="os-button" href="https://github.com/maitatomoya"
+                >GitHub ↗</a
+              ><a class="os-button" href="https://mt-dev-io.pages.dev"
+                >開発ブログ ↗</a
+              >
+            </div>
+          </div>
+          <div class="statusbar">2件のブックマーク</div>
+        </section>
+      </div>
+      <footer class="desktop-footer">
+        <span
+          >掲載しているサービスはすべて個人で開発・運用しています。<br />© 2026
+          Tomoya Maita</span
+        ><a href="https://github.com/maitatomoya">GitHub ↗</a>
+      </footer>
+    </main>
+    <nav
+      class="start-menu"
+      id="start-menu"
+      aria-label="スタートメニュー"
+      hidden
+    >
+      <div class="start-spine" aria-hidden="true">
+        TOMOYA <strong>PC</strong>
+      </div>
+      <div class="start-links">
+        <p>Tomoya Maita</p>
+        <a href="index.html">ホーム</a
+        ><a href="about.html" aria-current="page">プロフィール</a
+        ><a href="learn.html">学び</a><a href="works.html">作品</a
+        ><a href="https://mt-dev-io.pages.dev">ブログ</a
+        ><a href="https://github.com/maitatomoya">GitHub</a>
+        <hr />
+        <a href="#axis">大切にすることをひらく</a
+        ><a href="#doing">活動をひらく</a><a href="#links">リンクをひらく</a>
+      </div>
     </nav>
-    <p class="footPills">
-      <a class="pill" href="https://github.com/maitatomoya">GitHub</a>
-      <a class="pill" href="https://mt-dev-io.pages.dev">Blog</a>
-    </p>
-    <p class="footNote">掲載しているサービスはすべて個人で開発・運用しています。</p>
-    <p class="footCopy">© 2026 Tomoya Maita</p>
-  </footer>
-
-  <script src="nav.js"></script>
-</body>
+    <div class="taskbar">
+      <button
+        class="start-label"
+        type="button"
+        id="start-button"
+        aria-expanded="false"
+        aria-controls="start-menu"
+      >
+        <span class="start-monogram" aria-hidden="true">TM</span> スタート
+      </button>
+      <div class="task-buttons" aria-label="このページのウィンドウ">
+        <button
+          type="button"
+          data-restore="axis"
+          aria-controls="axis"
+          aria-pressed="true"
+        >
+          大切にすること</button
+        ><button
+          type="button"
+          data-restore="doing"
+          aria-controls="doing"
+          aria-pressed="true"
+        >
+          活動</button
+        ><button
+          type="button"
+          data-restore="links"
+          aria-controls="links"
+          aria-pressed="true"
+        >
+          リンク
+        </button>
+      </div>
+      <a class="taskbar-home" href="index.html">ホーム</a
+      ><span class="taskbar-clock"
+        ><span aria-hidden="true">JP</span
+        ><time id="desktop-clock" aria-label="現在時刻"></time
+      ></span>
+    </div>
+  </body>
 </html>

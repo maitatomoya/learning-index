@@ -1,0 +1,20 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="20"
+  height="28"
+  viewBox="0 0 20 28"
+  shape-rendering="crispEdges"
+>
+  <path
+    fill="none"
+    stroke="white"
+    stroke-width="4"
+    d="M5 4H9L10 5L11 4H15M10 5V23M5 24H9L10 23L11 24H15"
+  />
+  <path
+    fill="none"
+    stroke="black"
+    stroke-width="2"
+    d="M5 4H9L10 5L11 4H15M10 5V23M5 24H9L10 23L11 24H15"
+  />
+</svg>

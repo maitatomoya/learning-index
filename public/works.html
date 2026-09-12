@@ -1,105 +1,223 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>作品｜Tomoya Maita 公式サイト</title>
-  <meta name="description" content="デザインカタログのSapor、ピクセルロゴメーカーのPixsmithなど、学習サービス以外に個人で作ったプロダクト。">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <a class="skipLink" href="#main">本文へスキップ</a>
-
-  <header class="siteHeader" aria-label="サイトヘッダー">
-    <a class="brand" href="./" aria-label="Tomoya Maita 公式サイト トップへ">
-      <span class="brandLogo">Tomoya Maita</span>
-    </a>
-    <div class="navScrim" id="navScrim" aria-hidden="true"></div>
-    <nav class="nav" id="siteNav" aria-label="主要ナビゲーション">
-      <div class="navDrawerHead">
-        <span class="navDrawerTitle" aria-hidden="true">Menu</span>
-        <button class="navClose" type="button" id="navClose" aria-label="メニューを閉じる">×</button>
-      </div>
-      <a href="./">ホーム</a>
-      <a href="about.html">プロフィール</a>
-      <a href="learn.html">学び</a>
-      <a class="isActive" aria-current="page" href="works.html">作品</a>
-      <a href="https://mt-dev-io.pages.dev">ブログ</a>
-      <a href="https://github.com/maitatomoya">GitHub</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="デザインカタログのSapor、ピクセルロゴメーカーのPixsmithなど、学習サービス以外に個人で作ったプロダクト。"
+    />
+    <title>作品｜Tomoya Maita</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="desktop.js" defer></script>
+  </head>
+  <body class="desktop retro subpage">
+    <a class="skip" href="#main">本文へスキップ</a>
+    <header class="os-menu">
+      <a class="os-brand" href="index.html" aria-label="ホームへ">TM</a
+      ><strong>Tomoya Personal Computer</strong>
+      <nav aria-label="主要ナビゲーション">
+        <a href="index.html">ホーム</a><a href="about.html">プロフィール</a
+        ><a href="learn.html">学び</a
+        ><a href="works.html" aria-current="page">作品</a
+        ><a href="https://mt-dev-io.pages.dev">ブログ</a
+        ><a href="https://github.com/maitatomoya">GitHub</a>
+      </nav>
+      <span class="menu-right mono">DESKTOP EDITION / 2026</span>
+    </header>
+    <nav class="desktop-shortcuts" aria-label="デスクトップのショートカット">
+      <a href="index.html"
+        ><span class="shortcut-icon" aria-hidden="true">TM</span
+        ><span>ホーム</span></a
+      ><a href="about.html"
+        ><span class="shortcut-icon" aria-hidden="true">TXT</span
+        ><span>プロフィール</span></a
+      ><a href="learn.html"
+        ><span class="shortcut-icon" aria-hidden="true">&gt;_</span
+        ><span>学び</span></a
+      ><a href="works.html" aria-current="page"
+        ><span class="shortcut-icon" aria-hidden="true">C:</span
+        ><span>作品</span></a
+      ><a href="https://mt-dev-io.pages.dev"
+        ><span class="shortcut-icon" aria-hidden="true">LOG</span
+        ><span>ブログ</span></a
+      ><a href="https://github.com/maitatomoya"
+        ><span class="shortcut-icon" aria-hidden="true">{ }</span
+        ><span>GitHub</span></a
+      >
     </nav>
-    <div class="langSwitch" role="group" aria-label="Language">
-      <span class="langBtn isActive" aria-current="true">JP</span>
-    </div>
-    <button class="navToggle" type="button" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="メニューを開く">
-      <span class="navToggleBar"></span>
-      <span class="navToggleBar"></span>
-      <span class="navToggleBar"></span>
-    </button>
-  </header>
-
-  <main id="main">
-    <div class="pageHead">
-      <p class="deckTitle"><span>WORKS</span></p>
-      <h1 class="pageTitle">作品</h1>
-      <p class="pageLead">
-        学習サービス以外に作ったプロダクト。「自分が欲しかった道具」を小さく作って、公開しているものです。
-        学習系のサービスは<a class="textLink" href="learn.html">学び</a>のページにまとめています。
+    <main class="desk-layout" id="main" tabindex="-1">
+      <div class="desk-caption mono">TOMOYA MAITA — MY PROJECTS</div>
+      <div class="page-intro">
+        <div>
+          <h1>自分が欲しかった、道具。</h1>
+          <p>
+            学習サービス以外に作ったプロダクト。「自分が欲しかった道具」を小さく作って、公開しているものです。学習系のサービスは<a
+              href="learn.html"
+              >学び</a
+            >のページにまとめています。
+          </p>
+        </div>
+        <nav class="section-tabs" aria-label="ページ内ナビゲーション">
+          <a href="#apps">公開中のプロダクト</a>
+        </nav>
+      </div>
+      <section
+        class="window"
+        id="apps"
+        aria-label="公開中のプロダクト"
+        tabindex="-1"
+      >
+        <div class="titlebar">
+          <span class="window-title">my_projects</span>
+          <div class="window-controls">
+            <button
+              type="button"
+              data-minimize="apps"
+              aria-controls="apps"
+              aria-label="公開中のプロダクトを最小化"
+            >
+              <span aria-hidden="true">_</span></button
+            ><button
+              class="maximize-button"
+              type="button"
+              data-maximize="apps"
+              aria-controls="apps"
+              aria-label="公開中のプロダクトを最大化"
+              aria-pressed="false"
+            >
+              <span aria-hidden="true">□</span>
+            </button>
+          </div>
+        </div>
+        <div
+          class="window-content"
+          tabindex="0"
+          role="region"
+          aria-label="公開中のプロダクトの内容"
+        >
+          <div class="explorer-address">
+            <span>アドレス</span
+            ><span class="address-field">C:\Tomoya\Projects</span>
+          </div>
+          <div class="window-heading">
+            <h2>公開中のプロダクト</h2>
+            <p>日々の制作から生まれた、小さなアプリケーション。</p>
+          </div>
+          <div class="works-list">
+            <article class="work-row">
+              <span class="work-poster poster-sp" aria-hidden="true"
+                ><span class="mono">デザインカタログ</span><strong>Sapor</strong
+                ><span class="mono">TOMOYA MAITA / PERSONAL WORK</span></span
+              >
+              <div>
+                <p class="work-kind">デザインカタログ</p>
+                <h3>Sapor</h3>
+                <p>
+                  世界中のWebデザインをURLで採集し、AIが読める「Design
+                  DNA」として言語化するデザインカタログ。好きなデザインをAIコーディングツールへ渡せる。
+                </p>
+                <a class="os-button" href="https://sapor.mt114r-an.workers.dev"
+                  >作品を開く ↗</a
+                >
+              </div>
+            </article>
+            <article class="work-row">
+              <span class="work-poster poster-px" aria-hidden="true"
+                ><span class="mono">アイコン・ピクセルロゴメーカー</span
+                ><strong>Pixsmith</strong
+                ><span class="mono">TOMOYA MAITA / PERSONAL WORK</span></span
+              >
+              <div>
+                <p class="work-kind">アイコン・ピクセルロゴメーカー</p>
+                <h3>Pixsmith</h3>
+                <p>
+                  アイコンやピクセルロゴを作るWebアプリ。写真を半透明の下絵にしてなぞればドット絵になり、ピクセル文字を添えて書き出せる。
+                </p>
+                <a class="os-button" href="https://pixsmith.pages.dev"
+                  >作品を開く ↗</a
+                >
+              </div>
+            </article>
+            <article class="work-row">
+              <span class="work-poster poster-ar" aria-hidden="true"
+                ><span class="mono">ARアプリケーション</span
+                ><strong>This is pen</strong
+                ><span class="mono">TOMOYA MAITA / PERSONAL WORK</span></span
+              >
+              <div>
+                <p class="work-kind">ARアプリケーション</p>
+                <h3>This is pen</h3>
+                <p>
+                  iPhoneのカメラでペンを認識し、AR空間にテキストを3D表示するアプリ。ソースコードをGitHubで公開。
+                </p>
+                <a
+                  class="os-button"
+                  href="https://github.com/maitatomoya/this_is_pen"
+                  >ソースコードを見る ↗</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="statusbar">3個のオブジェクト / 個人で開発・運用</div>
+      </section>
+      <p class="below-link">
+        <a href="https://github.com/maitatomoya">GitHubで他の作品を見る ↗</a>
       </p>
-    </div>
-
-    <section class="section deckWrap" aria-labelledby="apps">
-      <h2 class="deckSub" id="apps">公開中のプロダクト</h2>
-      <div class="deck">
-        <a class="card c-yellow" href="https://sapor.mt114r-an.workers.dev">
-          <span class="cardGlyph" aria-hidden="true">Sp</span>
-          <span class="cardBody">
-            <span class="cardTitle">SAPOR</span>
-            <span class="cardDesc">世界中のWebデザインをURLで採集し、AIが読める「Design DNA」として言語化するデザインカタログ。好きなデザインをAIコーディングツールへ渡せる。</span>
-          </span>
-          <span class="cardArrow" aria-hidden="true">→</span>
-        </a>
-        <a class="card c-pink" href="https://pixsmith.pages.dev">
-          <span class="cardGlyph" aria-hidden="true">Px</span>
-          <span class="cardBody">
-            <span class="cardTitle">PIXSMITH</span>
-            <span class="cardDesc">アイコンやピクセルロゴを作るWebアプリ。写真を半透明の下絵にしてなぞればドット絵になり、ピクセル文字を添えて書き出せる。</span>
-          </span>
-          <span class="cardArrow" aria-hidden="true">→</span>
-        </a>
-        <a class="card c-cyan" href="https://github.com/maitatomoya/this_is_pen">
-          <span class="cardGlyph" aria-hidden="true">AR</span>
-          <span class="cardBody">
-            <span class="cardTitle">THIS IS PEN</span>
-            <span class="cardDesc">iPhoneのカメラでペンを認識し、AR空間にテキストを3D表示するアプリ。ソースコードをGitHubで公開。</span>
-          </span>
-          <span class="cardArrow" aria-hidden="true">→</span>
-        </a>
+      <footer class="desktop-footer">
+        <span
+          >掲載しているサービスはすべて個人で開発・運用しています。<br />© 2026
+          Tomoya Maita</span
+        ><a href="https://github.com/maitatomoya">GitHub ↗</a>
+      </footer>
+    </main>
+    <nav
+      class="start-menu"
+      id="start-menu"
+      aria-label="スタートメニュー"
+      hidden
+    >
+      <div class="start-spine" aria-hidden="true">
+        TOMOYA <strong>PC</strong>
       </div>
-    </section>
-
-    <p class="moreWrap">
-      <a class="pillBtn" href="https://github.com/maitatomoya">GitHubで他の作品を見る <span aria-hidden="true">→</span></a>
-    </p>
-  </main>
-
-  <footer class="siteFooter">
-    <nav class="footNav" aria-label="フッターナビゲーション">
-      <a href="about.html">プロフィール</a>
-      <a href="learn.html">学び</a>
-      <a href="works.html">作品</a>
-      <a href="https://mt-dev-io.pages.dev">ブログ</a>
+      <div class="start-links">
+        <p>Tomoya Maita</p>
+        <a href="index.html">ホーム</a><a href="about.html">プロフィール</a
+        ><a href="learn.html">学び</a
+        ><a href="works.html" aria-current="page">作品</a
+        ><a href="https://mt-dev-io.pages.dev">ブログ</a
+        ><a href="https://github.com/maitatomoya">GitHub</a>
+        <hr />
+        <a href="#apps">制作物をひらく</a>
+      </div>
     </nav>
-    <p class="footPills">
-      <a class="pill" href="https://github.com/maitatomoya">GitHub</a>
-      <a class="pill" href="https://mt-dev-io.pages.dev">Blog</a>
-    </p>
-    <p class="footNote">掲載しているサービスはすべて個人で開発・運用しています。</p>
-    <p class="footCopy">© 2026 Tomoya Maita</p>
-  </footer>
-
-  <script src="nav.js"></script>
-</body>
+    <div class="taskbar">
+      <button
+        class="start-label"
+        type="button"
+        id="start-button"
+        aria-expanded="false"
+        aria-controls="start-menu"
+      >
+        <span class="start-monogram" aria-hidden="true">TM</span> スタート
+      </button>
+      <div class="task-buttons" aria-label="このページのウィンドウ">
+        <button
+          type="button"
+          data-restore="apps"
+          aria-controls="apps"
+          aria-pressed="true"
+        >
+          制作物
+        </button>
+      </div>
+      <a class="taskbar-home" href="index.html">ホーム</a
+      ><span class="taskbar-clock"
+        ><span aria-hidden="true">JP</span
+        ><time id="desktop-clock" aria-label="現在時刻"></time
+      ></span>
+    </div>
+  </body>
 </html>

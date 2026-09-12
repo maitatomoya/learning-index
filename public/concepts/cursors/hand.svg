@@ -1,0 +1,20 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="28"
+  height="32"
+  viewBox="0 0 28 32"
+  shape-rendering="crispEdges"
+>
+  <path
+    fill="white"
+    stroke="black"
+    stroke-width="2"
+    d="M8 17V3H10V1H12V3H14V12H17V10H20V12H23V14H26V25H24V29H10V26H8V23H6V20H4V16H6Z"
+  />
+  <path
+    fill="none"
+    stroke="black"
+    stroke-width="2"
+    d="M14 12V20M18 13V20M22 15V21"
+  />
+</svg>
