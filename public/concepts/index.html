@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="data:," />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>トップページ3案の比較 — Tomoya Maita</title>
+    <link rel="stylesheet" href="concepts.css" />
+  </head>
+  <body class="comparison">
+    <header class="compare-bar">
+      <div class="compare-title">
+        <strong>Tomoya Maita</strong><span>トップページのデザイン比較</span>
+      </div>
+      <nav class="concept-selector" aria-label="デザインを選択">
+        <button data-page="desktop" aria-pressed="true">A 制作デスク</button
+        ><button data-page="gallery" aria-pressed="false">
+          B 作品ギャラリー</button
+        ><button data-page="archive" aria-pressed="false">
+          C ゲームの図鑑
+        </button>
+      </nav>
+      <div class="size-selector" aria-label="表示幅を選択">
+        <button data-size="desktop" aria-pressed="true">PC</button
+        ><button data-size="mobile" aria-pressed="false">スマホ</button>
+      </div>
+      <a id="standalone" href="desktop.html" target="_blank" rel="noopener"
+        >単独で開く ↗</a
+      >
+    </header>
+    <div class="compare-caption">
+      <span id="concept-caption"
+        >A / 90年代のパソコン。スタートメニューとウィンドウ操作ができる、自分だけの机。</span
+      ><span>デザイン検討用</span>
+    </div>
+    <main class="preview-stage">
+      <iframe
+        id="preview"
+        src="desktop.html"
+        title="A 制作デスクのプレビュー"
+      ></iframe>
+    </main>
+    <script src="compare.js"></script>
+  </body>
+</html>

@@ -1,76 +1,66 @@
 # Learning Index
 
-個人で開発・運用している学習Webサービス群の統一ポータルサイトです。
-別々のURLに散らばっているサービスを「作って、動かして、学ぶ」シリーズとして1ページにまとめ、
-転職活動時のポートフォリオ導線も兼ねます。
+個人で開発・運用している学習Webサービスとプロダクトをまとめた、Tomoya Maitaのポートフォリオサイトです。
 
-公開URL：https://learning-index.pages.dev
+公開URL：[learning-index.pages.dev](https://learning-index.pages.dev)
+
+## UI
+
+90年代のパソコンをヒントに、青緑の壁紙、灰色の立体枠、濃紺のタイトルバー、ドット書体を全ページで共有しています。本文には読みやすい日本語書体を使用します。
+
+- ホーム：自己紹介、代表作、学習教材、最近の公開。
+- 学び：200 Stepsシリーズ7本、クラウド設計3本、セキュリティ教材1本。
+- 作品：Sapor、Pixsmith、This is pen。
+- プロフィール：教育・AI・エンジニアリングの軸と活動の紹介。
+- ショートカットとスタートメニューからページを移動できます。
+- ウィンドウを最小化した場合は、タスクバーやページ内リンクから復元できます。
+- PCはデスクトップ全体を画面内に固定し、長い内容はウィンドウ本文だけをスクロールします。タイトルバーとタスクバーは固定です。
+- PCでは最大化と解除に対応。Escapeキーでも最大化を解除できます。
+- スマホでは縦並びに切り替え、最大化ボタンを非表示にします。
+- マウス環境では通常・リンク・文字選択のカーソルを切り替えます。
+- 時計は閲覧端末のローカル時刻です。通信や個人情報の保存は行いません。
+- JavaScriptなしでも本文とページ間のリンクを利用できます。操作ボタンはJavaScriptの初期化後に表示します。
+
+## 起動
+
+依存パッケージは不要です。
+
+```bash
+node server.js
+```
+
+[http://127.0.0.1:3951/](http://127.0.0.1:3951/)で確認できます。サーバーはローカルのみにバインドします。
+
+## 構成
+
+- `public/index.html`：ホーム
+- `public/learn.html`：学び
+- `public/works.html`：作品
+- `public/about.html`：プロフィール
+- `public/styles.css`：全ページの共通スタイル
+- `public/desktop.js`：共通ウィンドウ操作とスタートメニュー
+- `public/cursors/`：白黒のカーソル3種
+- `public/favicon.svg`：サイトアイコン
+- `public/concepts/`：検討用の3案。noindex指定で本線と分離
+- `docs/screenshots/`：PC・スマホの表示確認画像
+
+Google FontsでDotGothic16とNoto Sans JPを読み込みます。読み込めない場合も代替書体で表示します。
+
+## 検証
+
+全4ページのPC・スマホ表示、ページ間リンク、スタートメニュー、最小化・復元、最大化・Escapeキー操作を確認しています。11教材と3作品の既存説明・リンクを照合しています。変更内容と詳細は`docs/ui-verification.md`を参照してください。
 
 ## デプロイ
 
-Cloudflare Pagesへの直接アップロード方式（Node.js 22以上が必要）。
+Cloudflare Pagesへの直接アップロード方式です。ユーザーの公開許可を得てから実行します。
 
 ```bash
 npx wrangler pages deploy public --project-name=learning-index
 ```
 
-## 特徴
+## デザイン検討の記録
 
-- 依存パッケージゼロ（HTML+CSS＋モバイルメニュー用の最小限のJavaScript。JavaScriptなしでも閲覧できる）
-- ステッカー風のデザイン（2pxの縁取り＋ずらし影のカード、クリーム地にドット模様とパステルグラデーション、丸ゴシック系フォント）
-- 構成：ピル型ナビ／PICK UP（最新の公開と番号付きサムネイル）／一文の紹介／サービス案内（3列カード）／濃紺フッター
-- 画像は使わず、告知カードやサムネイルの表紙はCSSで描画
-- レスポンシブ対応（モバイルはハンバーガーメニューのドロワー、カードは1カラム）
-- 本文テキストはコントラスト比AA以上を確保
-
-## 起動方法
-
-ローカル確認用の静的配信サーバーを同梱しています（Node.js標準ライブラリのみ使用）。
-
-```bash
-node server.js
-# → http://127.0.0.1:3951/ で確認
-```
-
-サーバーは127.0.0.1にのみバインドされ、外部からはアクセスできません。
-
-## ページ構成
-
-個人の公式サイトとして、参考にしたサイトと同じく「ホーム＋コンテンツ別の下層ページ」の構成にしている。
-
-| ページ | 内容 |
-| --- | --- |
-| `index.html`（ホーム） | PICK UP（最新の公開と番号付きサムネイル）、一文の紹介、案内カード（学び／作品／プロフィール／200 Steps／ブログ／GitHub） |
-| `learn.html`（学び） | 学習系のポートフォリオ。200 Stepsシリーズ、アーキテクチャ学習、セキュリティ |
-| `works.html`（作品） | 学習サービス以外のプロダクト（Sapor、Pixsmith、this_is_pen） |
-| `about.html`（プロフィール） | 軸（教育・AI・エンジニアリング）、やっていること、リンク |
-
-## デザイン別バージョン（検討用）
-
-`public/variants/` に、ホームの内容そのままで雰囲気だけを変えた7バージョンを置いている（Undertale／Stardew Valley／PICO-8／Lospec／DOTOWN／Pixel Art Academy／Poolsuite）。
-`public/variants/index.html` がサムネイル付きの一覧。本線のデザインは変えず、今後の雰囲気変更の検討材料として残している（一覧・各版とも `noindex`）。
-
-デザインの好みと参考サイトの記録は `docs/design-ideal.md` と `docs/design-references.md` を参照。
-
-## ディレクトリ構成
-
-```
-learning-portal/
-├── server.js          # ローカル確認用の静的配信サーバー（ポート3951）
-├── public/
-│   ├── index.html     # ホーム
-│   ├── learn.html     # 学び
-│   ├── works.html     # 作品
-│   ├── about.html     # プロフィール
-│   ├── nav.js         # モバイルメニューの開閉
-│   ├── styles.css     # スタイル（全ページ共通）
-│   └── variants/      # デザイン別バージョン（検討用、noindex）
-├── docs/
-│   ├── design-ideal.md        # 理想のサイト像のメモ
-│   ├── design-references.md   # 配色の参考サイト一覧
-│   └── screenshots/
-└── README.md
-```
+`docs/design-ideal.md`と`docs/design-references.md`に好みと参考の記録があります。今回の全ページ更新は、比較用のA案を採用したものです。
 
 ## 掲載サービス一覧
 
@@ -78,32 +68,32 @@ learning-portal/
 
 ### 200 Stepsシリーズ（ブラウザ上で書いて実行して学ぶステップ教材）
 
-| サービス | URL |
-| --- | --- |
-| C++ 200 Steps | https://cpp-200-steps.pages.dev |
-| Rust 200 Steps | https://rust-200-steps.pages.dev |
-| Go 200 Steps | https://go-200-steps.pages.dev |
-| PHP 200 Steps | https://php-200-steps.pages.dev |
+| サービス             | URL                                    |
+| -------------------- | -------------------------------------- |
+| C++ 200 Steps        | https://cpp-200-steps.pages.dev        |
+| Rust 200 Steps       | https://rust-200-steps.pages.dev       |
+| Go 200 Steps         | https://go-200-steps.pages.dev         |
+| PHP 200 Steps        | https://php-200-steps.pages.dev        |
 | JavaScript 200 Steps | https://javascript-200-steps.pages.dev |
-| Stimulus 200 Steps | https://stimulus-200-steps.pages.dev |
-| Python 200 Steps | https://python-200-steps.pages.dev |
+| Stimulus 200 Steps   | https://stimulus-200-steps.pages.dev   |
+| Python 200 Steps     | https://python-200-steps.pages.dev     |
 
 ### アーキテクチャ学習
 
-| サービス | URL |
-| --- | --- |
-| AWS Architecture Patterns | https://aws-architecture-patterns.pages.dev |
+| サービス                     | URL                                                |
+| ---------------------------- | -------------------------------------------------- |
+| AWS Architecture Patterns    | https://aws-architecture-patterns.pages.dev        |
 | Cloudflareアーキテクチャ入門 | https://cloudflare-architecture-patterns.pages.dev |
-| GCP Architecture Patterns | https://gcp-architecture-patterns.pages.dev |
+| GCP Architecture Patterns    | https://gcp-architecture-patterns.pages.dev        |
 
 ### セキュリティ
 
-| サービス | URL |
-| --- | --- |
+| サービス              | URL                                     |
+| --------------------- | --------------------------------------- |
 | Web Security Patterns | https://web-security-patterns.pages.dev |
 
 ### ブログ
 
-| サービス | URL |
-| --- | --- |
+| サービス            | URL                         |
+| ------------------- | --------------------------- |
 | maita tomoya dev io | https://mt-dev-io.pages.dev |

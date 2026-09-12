@@ -1,0 +1,14 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="32"
+  viewBox="0 0 24 32"
+  shape-rendering="crispEdges"
+>
+  <path
+    fill="white"
+    stroke="black"
+    stroke-width="2"
+    d="M2 2V24L8 18L13 29L17 27L12 16H21Z"
+  />
+</svg>
